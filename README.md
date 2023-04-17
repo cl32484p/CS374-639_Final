@@ -9,9 +9,6 @@ Our app will provide students with personalized information about their meal pla
 
 Our app is unique in that it specifically targets college students with meal plans and provides personalized recommendations on food expenses and available deals. It also offers tips and suggestions for budgeting and saving, which are not offered by other similar apps.
 
-Other Similar Apps:
-Mint: ![image](https://user-images.githubusercontent.com/121947190/232582157-d5c0fbcf-c3cb-44c0-b075-105054304b67.png)
-
 Some potential risks associated with the development of this app include:
 
 Technical issues: There may be unforeseen technical issues that arise during the development process that could delay the launch of the app.
