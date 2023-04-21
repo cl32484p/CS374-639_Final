@@ -3,11 +3,17 @@ CS 639 Final Project
 
 ## The targeted Problem 
 
-The problem we aim to solve is the difficulty that students face in managing their meal plans and budgets while studying. Students often struggle to determine how much they should be spending on food per day, how many meals they can have per day at a certain price, and how long they have until the end of the semester. They may also miss out on food deals and discounts due to lack of awareness. This app aims to make it easier for students to manage their budgets and make informed decisions about their food choices.As we can see from the picture that 54 percent of peole waste moeny on fast food.This implies how strong the problem that we are facing. ![Wasteful-Spending_asset2](https://user-images.githubusercontent.com/78415690/233514592-f0697221-94e3-4255-8611-8230beb6dab1.jpg)
+The problem we aim to solve is the difficulty that students face in managing their meal plans and budgets while studying. Students often struggle to determine how much they should be spending on food per day, how many meals they can have per day at a certain price, and how long they have until the end of the semester. They may also miss out on food deals and discounts due to lack of awareness. This app aims to make it easier for students to manage their budgets and make informed decisions about their food choices.As we can see from the picture that 54 percent of peole waste moeny on fast food.This implies how strong the problem that we are facing. 
 
-##Our Targeted Audience (Persona)
+![Wasteful-Spending_asset2](https://user-images.githubusercontent.com/78415690/233514592-f0697221-94e3-4255-8611-8230beb6dab1.jpg)
 
-Our target audience is college and university students who have meal plans and are looking to better manage their food budgets and expenses.
+## Our Targeted Audience (Persona)
+
+Our target audience is college and university students and the age between 18 to 27.
+
+![Wasteful-Spending_asset2](https://user-images.githubusercontent.com/78415690/233516180-19915a92-e204-42ac-8e6f-92c8d5edded2.jpg)
+
+Theses students need to have meal plans and are looking to better manage their food budgets and expenses.
 
 Our app will provide students with personalized information about their meal plans, food expenses, and available deals. By answering a few simple questions, students can receive recommendations on how much they should be spending per day and how many meals they can have at a certain price point. Our vision is to empower students to make informed decisions about their food choices and budgets, leading to more financial stability and less stress.
 
