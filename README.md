@@ -16,7 +16,7 @@ Our target audience is college and university students and the age between 18 to
 Theses students need to have meal plans and are looking to better manage their food budgets and expenses.
 
 ## Our Features
-* Ask users information for on custom data
+* Ask users for information to personalize experience
 * Display percentage of meal plans left
 * Display recommended $ per day to last til end of semester
 * Display recommended caloric intake
