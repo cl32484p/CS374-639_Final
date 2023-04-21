@@ -30,12 +30,12 @@ Our app will provide students with personalized information about their meal pla
 ## Why Us?
 Our app is unique in that it specifically targets college students with meal plans and provides personalized recommendations on food expenses and available deals. It also offers tips and suggestions for budgeting and saving, which are not offered by other similar apps.
 
-Some potential risks associated with the development of this app include:
+## Potential Risks
 
-Technical issues: There may be unforeseen technical issues that arise during the development process that could delay the launch of the app.
+* Technical issues: There may be unforeseen technical issues that arise during the development process that could delay the launch of the app.
 
-Lack of user adoption: While we believe there is a need for this app among college students, there is a risk that it may not be adopted by a large enough user base to be financially viable.
+* Lack of user adoption: While we believe there is a need for this app among college students, there is a risk that it may not be adopted by a large enough user base to be financially viable.
 
-Budget constraints: Developing an app can be expensive, and there is a risk that we may not have enough funding to fully realize our vision for the app.
+* Budget constraints: Developing an app can be expensive, and there is a risk that we may not have enough funding to fully realize our vision for the app.
 
 
