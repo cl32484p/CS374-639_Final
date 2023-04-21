@@ -27,7 +27,7 @@ Theses students need to have meal plans and are looking to better manage their f
 Our app will provide students with personalized information about their meal plans, food expenses, and available deals. By answering a few simple questions, students can receive recommendations on how much they should be spending per day and how many meals they can have at a certain price point. Our vision is to empower students to make informed decisions about their food choices and budgets, leading to more financial stability and less stress.
 
 
-
+## Why Us?
 Our app is unique in that it specifically targets college students with meal plans and provides personalized recommendations on food expenses and available deals. It also offers tips and suggestions for budgeting and saving, which are not offered by other similar apps.
 
 Some potential risks associated with the development of this app include:
