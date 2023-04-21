@@ -16,13 +16,13 @@ Our target audience is college and university students and the age between 18 to
 Theses students need to have meal plans and are looking to better manage their food budgets and expenses.
 
 ## Our Features
-*Ask users information for on custom data
-*Display percentage of meal plans left
-*Display recommended $ per day to last til end of semester
-*Display recommended caloric intake
-*Allow users to edit balance remaining
-*Provide meal options/deals
-*Provide tips for eating
+* Ask users information for on custom data
+* Display percentage of meal plans left
+* Display recommended $ per day to last til end of semester
+* Display recommended caloric intake
+* Allow users to edit balance remaining
+* Provide meal options/deals
+* Provide tips for eating
 
 Our app will provide students with personalized information about their meal plans, food expenses, and available deals. By answering a few simple questions, students can receive recommendations on how much they should be spending per day and how many meals they can have at a certain price point. Our vision is to empower students to make informed decisions about their food choices and budgets, leading to more financial stability and less stress.
 
