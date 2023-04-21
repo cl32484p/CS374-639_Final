@@ -40,4 +40,4 @@ Our app is unique in that it specifically targets college students with meal pla
 
 ## Project Goals
 
-  For this project, we are aiming to provide a solution to a problem faced every year by college students and allow users to become aware of the significance of budgeting, not only at their university but in their future as well. We are also aiming to improve our mobile application development skill, build our portfolios, and gain more experience in collaborating with others. 
+  For this project, we are aiming to provide a solution to a problem faced every year by college students and allow users to become aware of the significance of budgeting, not only at their university but in their future as well. We are also aiming to improve our mobile application development skills, build our portfolios, and gain more experience in collaborating with others. 
