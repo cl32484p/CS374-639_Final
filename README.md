@@ -1,7 +1,11 @@
 # CS639_Final
 CS 639 Final Project
 
+## The targeted Problem 
+
 The problem we aim to solve is the difficulty that students face in managing their meal plans and budgets while studying. Students often struggle to determine how much they should be spending on food per day, how many meals they can have per day at a certain price, and how long they have until the end of the semester. They may also miss out on food deals and discounts due to lack of awareness. This app aims to make it easier for students to manage their budgets and make informed decisions about their food choices.As we can see from the picture that 54 percent of peole waste moeny on fast food.This implies how strong the problem that we are facing. ![Wasteful-Spending_asset2](https://user-images.githubusercontent.com/78415690/233514592-f0697221-94e3-4255-8611-8230beb6dab1.jpg)
+
+##Our Targeted Audience (Persona)
 
 Our target audience is college and university students who have meal plans and are looking to better manage their food budgets and expenses.
 
