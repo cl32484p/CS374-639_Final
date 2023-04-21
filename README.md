@@ -9,7 +9,7 @@ The problem we aim to solve is the difficulty that students face in managing the
 
 ## Our Targeted Audience (Persona)
 
-Our target audience is college and university students and the age between 18 to 27.
+Our target audience is college and university students and the age between 18 to 27. For this prototype we are mainly focused on Pace University students.
 
 ![Wasteful-Spending_asset2](https://user-images.githubusercontent.com/78415690/233516180-19915a92-e204-42ac-8e6f-92c8d5edded2.jpg)
 
