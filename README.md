@@ -1,43 +1,61 @@
 # CS639_Final
 CS 639 Final Project
 
-## The Targeted Problem 
-
-The problem we aim to solve is the difficulty that students face in managing their meal plans and budgets while studying.A meal plan is essential to every student’s experience on campus.   Students often struggle to determine how much they should be spending on food per day, how many meals they can have per day at a certain price, and how long they have until the end of the semester. They may also miss out on food deals and discounts due to lack of awareness.This is an important problem because budgeting a meal plan can be practice for budgeting money later in life, where you have to know how much you can spend and how often you should be spending. Students should always have the best tools available to make it through the semester and having enough for breakfast or dinner at the end of the semester can make a great difference for anyone. This app aims to make it easier for students to manage their budgets and make informed decisions about their food choices. As we can see from the picture, below, that 54 percent of peole waste moeny on fast food.This also implies how significant this issue is. 
-
-![Wasteful-Spending_asset2](https://user-images.githubusercontent.com/78415690/233514592-f0697221-94e3-4255-8611-8230beb6dab1.jpg)
-
-## Our Targeted Audience (Persona)
-
-Our target audience is college and university students and the age between 18 to 27. For this prototype, we are mainly focused on Pace University students.
-
-![Wasteful-Spending_asset2](https://user-images.githubusercontent.com/78415690/233516180-19915a92-e204-42ac-8e6f-92c8d5edded2.jpg)
-
-Theses students need to have meal plans and are looking to better manage their food budgets and expenses.
-
-## Our Features
-* Ask users for information to personalize experience
-* Display percentage of meal plans left
-* Display recommended $ per day to last til end of semester
-* Display recommended caloric intake
-* Allow users to edit balance remaining
-* Provide meal options/deals
-* Provide tips for eating
-
-Our app will provide students with personalized information about their meal plans, food expenses, and available deals. By answering a few simple questions, students can receive recommendations on how much they should be spending per day and how many meals they can have at a certain price point. Our vision is to empower students to make informed decisions about their food choices and budgets, leading to more financial stability and less stress.
+## Our Logo 
 
 
-## Why Us?
-Our app is unique in that it specifically targets college students with meal plans and provides personalized recommendations on food expenses and available deals. It also offers tips and suggestions for budgeting and saving, which are not offered by other similar apps.
+![• Discord _ @ceejay715 - Google Chrome 4_23_2023 5_56_23 PM](https://user-images.githubusercontent.com/78415690/233869566-a6e79a09-0254-4d88-949f-ed83e252dbaf.png)
 
-## Potential Risks
+## Team Members 
 
-* Technical issues: There may be unforeseen technical issues that arise during the development process that could delay the launch of the app.
+Freddy ![Freddy](https://user-images.githubusercontent.com/78415690/233870133-b82a30c9-d901-4edf-9230-947ffdd22962.jpeg)
 
-* Lack of user adoption: While we believe there is a need for this app among college students, there is a risk that it may not be adopted by a large enough user base to be financially viable.
+Cj Lugo ![WhatsApp Image 2023-04-23 at 6 34 08 PM](https://user-images.githubusercontent.com/78415690/233869993-7e4e7ad3-26b6-4f38-beff-bb1b6fd4609e.jpeg)
 
-* Budget constraints: Developing an app can be expensive, and there is a risk that we may not have enough funding to fully realize our vision for the app.
+Shaki singh ![download](https://user-images.githubusercontent.com/78415690/233870195-13f223cb-3f15-4e9b-8066-09b44948ab37.png)
 
-## Project Goals
+## Idea prposal and Research 
 
-  For this project, we are aiming to provide a solution to a problem faced every year by college students and allow users to become aware of the significance of budgeting, not only at their university but in their future as well. We are also aiming to improve our mobile application development skills, build our portfolios, and gain more experience in collaborating with others. 
+[Idea proposal](https://docs.google.com/document/d/1Gbrn7ix9BgLFeoozGtV-X0wHcAa_KWbpz_kpgK3_TH4/edit)
+
+## Design 
+
+[Design](https://www.figma.com/file/9oYwMClhlH7S1uueCZhORC/Untitled?node-id=0-1&t=BamED1Xe1M9feRd7-0)
+
+## Process 
+
+### Sprint 1 
+
+* [Sprint Planning](https://docs.google.com/document/d/1ZlfdA0GYv4EwY4Q3WgzRPedhIh2oyHHxo5CiuDEIvl8/edit)
+* [Scrums](https://docs.google.com/document/d/1-Yl3fZahjLiyeS7mO8Nu5Cr3PFlCQSI72sZKxibKsFk/edit)
+* [Sprint demo video]
+* [Sprint retrospective]
+
+### Sprint 2 
+
+* [Sprint Planning]
+* [Scrums]
+* [Sprint demo video]
+* [Sprint retrospective]
+
+### Sprint 3
+* [Sprint Planning]
+* [Scrums]
+* [Sprint demo video]
+* [Sprint retrospective]
+
+## Tools & APIs
+
+![Android Studio](https://img.shields.io/badge/Android%20Studio-3DDC84.svg?style=for-the-badge&logo=android-studio&logoColor=white)
+
+![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)
+
+![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
+
+![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white)
+
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white)
+
+![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
