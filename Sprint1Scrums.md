@@ -11,15 +11,15 @@
     
 2.	What will I do until the next Scrum?  
   **Freddy** -
+  
+   **Shakti** -
    
-  **Shakti** - 
-   
-  **CJ** - 
+   **CJ** - 
     
 3.	What obstacles are impeding my progress?  
   **Freddy** -
-   
-  **Shakti** - 
-   
+  
+  **Shakti** -
+  
   **CJ** - 
    
