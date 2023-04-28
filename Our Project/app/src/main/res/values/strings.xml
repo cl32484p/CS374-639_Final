@@ -2,4 +2,18 @@
     <string name="app_name">Our Project</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="year_levels">
+        <item>Select Year</item>
+
+
+    </string-array>
+
+    <string-array name="meal_plans">
+        <item>Select Plan</item>
+
+
+    </string-array>
+
+
 </resources>
