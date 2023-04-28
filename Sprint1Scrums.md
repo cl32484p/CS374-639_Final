@@ -4,8 +4,10 @@
 
 1.	What did I accomplish since the last Scrum?  
     **Freddy** - 
-      **Shakti** - 
-      **CJ** - 
+    
+    **Shakti** - 
+    
+    **CJ** - 
     
 2.	What will I do until the next Scrum?  
    **Freddy** -
