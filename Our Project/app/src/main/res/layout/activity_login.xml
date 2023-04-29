@@ -53,9 +53,9 @@
         android:text="Login"
         android:textColor="@android:color/white" />
 
-    <!-- Sign Up Text -->
-    <TextView
-        android:id="@+id/signup_text"
+    <!-- Sign Up Button -->
+    <Button
+        android:id="@+id/signup_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@id/login_button"
