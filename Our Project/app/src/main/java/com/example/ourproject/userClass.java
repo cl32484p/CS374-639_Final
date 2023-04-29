@@ -9,6 +9,12 @@ public class userClass {
 
     }
 
+    public userClass(String name, String email, String password){
+        this.name = name;
+        this.password = password;
+        this.email = email;
+    }
+
     public userClass(String name, String email, String password, String major, String mealPlan, String residency, String campus, String yearLevel){
         this.name = name;
         this.password = password;
@@ -80,13 +86,6 @@ public class userClass {
         this.residency = residency;
     }
 
-    public String getMealPlan() {
-        return mealPlan;
-    }
-
-    public void setMealPlan(String mealPlan) {
-        this.mealPlan = mealPlan;
-    }
 
     public String getCampus() {
         return campus;
