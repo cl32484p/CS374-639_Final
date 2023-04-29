@@ -1,6 +1,7 @@
 package com.example.ourproject;
 
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -10,12 +11,19 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+
 public class Register extends AppCompatActivity {
     private Button registerButton;
     private Button loginButton;
     private EditText editName;
     private EditText editPassword;
     private EditText editEmail;
+
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +36,7 @@ public class Register extends AppCompatActivity {
         editName = findViewById(R.id.full_name);
         editPassword = findViewById(R.id.password_field);
         editEmail = findViewById(R.id.email_field);
+        mAuth= FirebaseAuth.getInstance();
 
         //When User Clicks Register
         registerButton.setOnClickListener(new View.OnClickListener() {
@@ -48,13 +57,23 @@ public class Register extends AppCompatActivity {
                 else {
                     // userClass newUser = new userClass(fullName, email, password);
                     //send user info to next activity
-                    Bundle bundle = new Bundle();
-                    bundle.putString("name", fullName);
-                    bundle.putString("email", email);
-                    bundle.putString("password", password);
-                    Intent intent = new Intent(Register.this, SignUp2.class);
-                    intent.putExtras(bundle);
-                    startActivity(intent);
+                    mAuth.createUserWithEmailAndPassword(email, password)
+                            .addOnCompleteListener( new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    if (task.isSuccessful()) {
+                                        Toast.makeText(Register.this, "Signup done",
+                                                Toast.LENGTH_SHORT).show();
+                                        Intent intent = new Intent(Register.this,SignUp2.class);
+                                        startActivity(intent);
+                                    } else {
+
+                                        Toast.makeText(Register.this, "Authentication failed.",
+                                                Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                            });
+
                 }
 
             }
