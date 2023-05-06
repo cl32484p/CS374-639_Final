@@ -5,13 +5,26 @@
 
     <string-array name="year_levels">
         <item>Select Year</item>
-
+        <item>Freshman</item>
+        <item>Sophomore</item>
+        <item>Junior</item>
+        <item>Senior</item>
+        <item>Grad/Law</item>
 
     </string-array>
 
     <string-array name="meal_plans">
         <item>Select Plan</item>
-
+        <item> (Buy up plan for all students): $2,585.00 ($375 Flex) Daily average $25 </item>
+        <item> Gold (Buy up plan for all students): $2,435.00 ($350 Flex) Daily average $23  </item>
+        <item> Silver (Buy up plan for all students): $2,285.00 ($325 Flex) Daily average $22  </item>
+        <item> Copper (Buy up plan for all students): $2,135.00 ($225 Flex) Daily average $20  </item>
+        <item> Grad and Law Plus: $760.00 ($200 Flex) Daily average $7 </item>
+        <item> Bronze (All First-Year students and sophomores in Westchester (except Townhouse residents)): $2,000.00 ($55 Flex) Daily average $18  </item>
+        <item> Red (All Westchester Sophomores - except Townhouse residents): $1,950 ($55 Flex) Daily average $18  </item>
+        <item> Blue (All undergrad residents in Westchester (except Townhouse residents) with 64 or more credits): $1,075.00 ($105 Flex) Daily average $10  </item>
+        <item> Green (All Townhouse Residents): $525.00 ($50 Flex) Daily average $5  </item>
+        <item> Grad and Law: $575.00 ($50 Flex) Daily average $5  </item>
 
     </string-array>
 

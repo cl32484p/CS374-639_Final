@@ -1,7 +1,9 @@
 package com.example.ourproject;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -11,6 +13,14 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 public class SignUp2 extends AppCompatActivity {
 
 private EditText major;
@@ -19,6 +29,7 @@ private EditText major;
     private RadioGroup residency;
     private Spinner mealPlan;
     private Button create;
+    FirebaseAuth mAuth;
 
 
     @Override
@@ -90,6 +101,8 @@ private EditText major;
             }
         });
 
+
+        //Profile will be completed and updated below.
         create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -99,6 +112,41 @@ private EditText major;
                 String userCampus = ((RadioButton)findViewById(campus.getCheckedRadioButtonId())).getText().toString();
                 String userYear = year.getSelectedItem().toString();
                 String userMealPlan = mealPlan.getSelectedItem().toString();
+
+                //retrieve userID
+                mAuth= FirebaseAuth.getInstance();
+                FirebaseUser user = mAuth.getCurrentUser();
+                String userId = user.getUid();
+
+
+                DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("users").child(userId);
+               // mDatabase.child("users").child(userId).setValue(newUser);
+
+                //set values for users profile in the database
+                mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        userClass user = dataSnapshot.getValue(userClass.class);
+                        user.setMajor(userMajor);
+                        user.setResidency(userResidency);
+                        user.setCampus(userCampus);
+                        user.setYearLevel(userYear);
+                        user.setMealplan(userMealPlan);
+
+                        // Update the user's data in the database
+                        mDatabase.setValue(user);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                        // Handle database read error
+                    }
+                });
+
+                    Intent intent = new Intent(SignUp2.this, MainActivity.class);
+                    startActivity(intent);
+
+
 
                 /* Retrieve Intent
                 Bundle mBundle = new Bundle();

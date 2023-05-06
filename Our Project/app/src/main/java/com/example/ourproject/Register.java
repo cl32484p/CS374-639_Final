@@ -15,6 +15,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class Register extends AppCompatActivity {
     private Button registerButton;
@@ -62,6 +65,15 @@ public class Register extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()) {
+
+                                        //Create user in database with generated userID
+                                        FirebaseUser user = mAuth.getCurrentUser();
+                                        String userId = user.getUid();
+
+                                        userClass newUser = new userClass(fullName, email, password);
+                                        DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
+                                        mDatabase.child("users").child(userId).setValue(newUser);
+
                                         Toast.makeText(Register.this, "Signup done",
                                                 Toast.LENGTH_SHORT).show();
                                         Intent intent = new Intent(Register.this,SignUp2.class);
