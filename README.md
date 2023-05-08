@@ -34,13 +34,13 @@ Shakti Singh ![download](https://user-images.githubusercontent.com/78415690/2338
 ### Sprint 2 
 
 * [Sprint Planning]
-* [Scrums]
+* [Scrums](https://docs.google.com/document/d/1-Yl3fZahjLiyeS7mO8Nu5Cr3PFlCQSI72sZKxibKsFk/edit)
 * [Sprint demo video]
 * [Sprint retrospective]
 
 ### Sprint 3
 * [Sprint Planning]
-* [Scrums]
+* [Scrums] (https://docs.google.com/document/d/1-Yl3fZahjLiyeS7mO8Nu5Cr3PFlCQSI72sZKxibKsFk/edit)
 * [Sprint demo video]
 * [Sprint retrospective]
 
