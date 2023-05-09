@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 public class Home extends AppCompatActivity {
 
-    //This activity will be the main hub for the user and our app 
+    //This activity will be the main hub for the user and our app
 
 
     @Override

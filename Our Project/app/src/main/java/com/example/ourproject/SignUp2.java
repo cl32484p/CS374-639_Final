@@ -7,11 +7,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.Switch;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -29,6 +32,8 @@ private EditText major;
     private RadioGroup residency;
     private Spinner mealPlan;
     private Button create;
+    private Boolean resCheck = false;
+    private Boolean campCheck = false;
     FirebaseAuth mAuth;
 
 
@@ -44,29 +49,95 @@ private EditText major;
         mealPlan = findViewById(R.id.spinner_mealplan);
         create = findViewById(R.id.newUserBtn);
 
-// Disable UI elements until the user has made a selection
+/*Disable UI elements until the user has made a selection
         campus.setEnabled(false);
         year.setEnabled(false);
         mealPlan.setEnabled(false);
+        create.setEnabled(false); */
         create.setEnabled(false);
 
         // Set up the residency radio group to enable/disable the campus radio group
         residency.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                campus.setEnabled(true);
-                year.setEnabled(false);
+                RadioButton radioButton = findViewById(checkedId);
+                String selected = radioButton.getText().toString();
+                String[] plans = null;
+
+               //If a user is a commuter, only display commuter meal plan options
+                if(selected.equals("Commuter")) {
+                    resCheck = true;
+                    plans = getResources().getStringArray(R.array.commuter_plans);
+                }
+                else if(selected.equals("Resident")) {
+                    resCheck = false;
+                    plans = getResources().getStringArray(R.array.default_plans);
+
+                    /*if(campCheck)
+                    {
+                        if (checkedId == R.id.button_resident) {
+                        campus.clearCheck();
+                        }
+                    } */
+
+                }
+
+                if(plans != null) {
+                    ArrayAdapter<String> adapter = new ArrayAdapter<>(SignUp2.this, android.R.layout.simple_spinner_dropdown_item, plans);
+                    mealPlan.setAdapter(adapter);
+                }
+
+                  /*  campus.setEnabled(true);
+                    year.setEnabled(false);
                 mealPlan.setEnabled(false);
+                    */
                 create.setEnabled(false);
-            }
-        });
+
+
+        }});
 
 // Set up the campus radio group to enable/disable the year spinner
         campus.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                year.setEnabled(true);
-                mealPlan.setEnabled(false);
+               // mealPlan.setEnabled(false);
+                RadioButton radioButton = findViewById(checkedId);
+                String selected = radioButton.getText().toString();
+                String[] plans = null;
+
+
+
+
+                //If user is a resident, display meal plan options based on campus
+                if(!resCheck)
+                {
+                    if(selected.equals("Westchester")) {
+                        plans = getResources().getStringArray(R.array.west_plans);
+                        campCheck = true;
+                    }
+                    else if(selected.equals("Westchester(Townhouses)")) {
+                        plans = getResources().getStringArray(R.array.townhouse_plans);
+                        campCheck = true;
+                    }
+                    else if(selected.equals("Grad or Law")){
+                        plans = getResources().getStringArray(R.array.grad_plans);
+                        campCheck = true;
+                    }
+
+                    else if(selected.equals("NYC")){
+                        plans = getResources().getStringArray(R.array.nyc_plans);
+                        campCheck = true;
+                    }
+
+                    if(plans != null) {
+                        ArrayAdapter<String> adapter = new ArrayAdapter<>(SignUp2.this, android.R.layout.simple_spinner_dropdown_item, plans);
+                        mealPlan.setAdapter(adapter);
+                    }
+                }
+
+
+               // year.setEnabled(true);
+
                 create.setEnabled(false);
 
             }
@@ -76,7 +147,7 @@ private EditText major;
         year.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                mealPlan.setEnabled(true);
+               // mealPlan.setEnabled(true);
                 create.setEnabled(false);
 
             }
@@ -107,20 +178,27 @@ private EditText major;
             @Override
             public void onClick(View v) {
                 // Retrieve the user input
+                if(mealPlan.getSelectedItem().toString().equals("Select Plan") || mealPlan.getSelectedItem().toString().equals("Select or Reselect Campus for more options!")||major.getText().toString().isEmpty() || campus.getCheckedRadioButtonId() == -1 || residency.getCheckedRadioButtonId() == -1 || year.getSelectedItem().toString().equals("Select Year")){
+                    Toast.makeText(SignUp2.this, "Please fill every field", Toast.LENGTH_SHORT).show();
+                }
+
+                else
+                {
                 String userMajor = major.getText().toString();
-                String userResidency = ((RadioButton)findViewById(residency.getCheckedRadioButtonId())).getText().toString();
-                String userCampus = ((RadioButton)findViewById(campus.getCheckedRadioButtonId())).getText().toString();
+                String userResidency = ((RadioButton) findViewById(residency.getCheckedRadioButtonId())).getText().toString();
+                String userCampus = ((RadioButton) findViewById(campus.getCheckedRadioButtonId())).getText().toString();
                 String userYear = year.getSelectedItem().toString();
                 String userMealPlan = mealPlan.getSelectedItem().toString();
 
+
                 //retrieve userID
-                mAuth= FirebaseAuth.getInstance();
+                mAuth = FirebaseAuth.getInstance();
                 FirebaseUser user = mAuth.getCurrentUser();
                 String userId = user.getUid();
 
 
                 DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("users").child(userId);
-               // mDatabase.child("users").child(userId).setValue(newUser);
+                // mDatabase.child("users").child(userId).setValue(newUser);
 
                 //set values for users profile in the database
                 mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -143,10 +221,10 @@ private EditText major;
                     }
                 });
 
-                    Intent intent = new Intent(SignUp2.this, MainActivity.class);
-                    startActivity(intent);
+                Intent intent = new Intent(SignUp2.this, MainActivity.class);
+                startActivity(intent);
 
-
+            }
 
                 /* Retrieve Intent
                 Bundle mBundle = new Bundle();
@@ -158,10 +236,17 @@ private EditText major;
                 //Create new user
                userClass newUser = new userClass(name, email, password, userMajor, userMealPlan, userResidency, userCampus, userYear);
             */
-            }
+            } //end of onClick
 
         });
 
 
     } //end of onCreate
+
+
+
+
+
+
+
 }

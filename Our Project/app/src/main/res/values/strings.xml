@@ -28,5 +28,85 @@
 
     </string-array>
 
+    <string-array name="default_plans">
+        <item>Select Plan</item>
+        <item>Select or Reselect Campus for more options!</item>
+
+
+    </string-array>
+
+
+
+    <string-array name="west_plans">
+        <item>Select Plan</item>
+        <item> Platinum $2,585.00 ($375 Flex) Daily average $25</item>
+        <item> Gold $2,435.00 ($350 Flex) Daily average $23  </item>
+        <item> Silver $2,285.00 ($325 Flex) Daily average $22  </item>
+        <item> Copper $2,135.00 ($225 Flex) Daily average $20  </item>
+        <item> Bronze $2,000.00 ($55 Flex) Daily average $18  </item>
+        <item> Red $1,950 ($55 Flex) Daily average $18  </item>
+        <item> Blue $1,075.00 ($105 Flex) Daily average $10  </item>
+        <item> Grad and Law: $575.00 ($50 Flex) Daily average $5  </item>
+        <item> Grad and Law Plus: $760.00 ($200 Flex) Daily average $7 </item>
+
+    </string-array>
+
+    <string-array name="townhouse_plans">
+        <item>Select Plan</item>
+        <item> Platinum $2,585.00 ($375 Flex) Daily average $25</item>
+        <item> Gold $2,435.00 ($350 Flex) Daily average $23  </item>
+        <item> Silver $2,285.00 ($325 Flex) Daily average $22  </item>
+        <item> Copper $2,135.00 ($225 Flex) Daily average $20  </item>
+        <item> Green $525.00 ($50 Flex) Daily average $5  </item>
+        <item> Grad and Law: $575.00 ($50 Flex) Daily average $5  </item>
+        <item> Grad and Law Plus: $760.00 ($200 Flex) Daily average $7 </item>
+
+    </string-array>
+
+
+    <string-array name="nyc_plans">
+        <item>Select Plan</item>
+        <item> Platinum $2,585.00 ($375 Flex) Daily average $25 </item>
+        <item> Gold $2,435.00 ($350 Flex) Daily average $23  </item>
+        <item> Silver $2,285.00 ($325 Flex) Daily average $22  </item>
+        <item> Copper $2,135.00 ($225 Flex) Daily average $20  </item>
+        <item> Bronze $2,000.00 ($55 Flex) Daily average $18  </item>
+        <item> Blue $1,075.00 ($105 Flex) Daily average $10  </item>
+        <item> Green $525.00 ($50 Flex) Daily average $5  </item>
+        <item> Grad and Law: $575.00 ($50 Flex) Daily average $5  </item>
+        <item> Grad and Law Plus: $760.00 ($200 Flex) Daily average $7 </item>
+    </string-array>
+
+    <string-array name="commuter_plans">
+        <item>Select Plan</item>
+        <item> Default $300 ($50 Flex) Daily average $3 </item>
+        <item> Level 1 $575 ($50 Flex) Daily average $5</item>
+        <item> Level 2 $800 ($50 Flex) Daily average $7 </item>
+        <item> Level 3 $1,175 ($50 Flex) Daily average $11</item>
+        <item> Green $525.00 ($50 Flex) Daily average $5  </item>
+        <item> Grad and Law: $575.00 ($50 Flex) Daily average $5 </item>
+        <item> Grad and Law Plus: $760.00 ($200 Flex) Daily average $7 </item>
+    </string-array>
+
+    <string-array name="grad_plans">
+        <item>Select Plan</item>
+        <item> Default $575 ($50 Flex) Daily average $5</item>
+        <item> Platinum $2,585.00 ($375 Flex) Daily average $25</item>
+        <item> Gold $2,435.00 ($350 Flex) Daily average $23  </item>
+        <item> Silver $2,285.00 ($325 Flex) Daily average $22  </item>
+        <item> Copper $2,135.00 ($225 Flex) Daily average $20  </item>
+        <item> Bronze $2,000.00 ($55 Flex) Daily average $18  </item>
+        <item> Red $1,950 ($55 Flex) Daily average $18  </item>
+        <item> Blue $1,075.00 ($105 Flex) Daily average $10  </item>
+        <item> Green $525.00 ($50 Flex) Daily average $5  </item>
+        <item> Grad and Law: $575.00 ($50 Flex) Daily average $5 </item>
+        <item> Grad and Law Plus: $760.00 ($200 Flex) Daily average $7 </item>
+    </string-array>
+
+
+
+
+
+
 
 </resources>
