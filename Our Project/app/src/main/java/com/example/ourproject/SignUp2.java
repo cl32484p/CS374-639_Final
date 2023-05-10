@@ -24,6 +24,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class SignUp2 extends AppCompatActivity {
 
 private EditText major;
@@ -34,6 +37,10 @@ private EditText major;
     private Button create;
     private Boolean resCheck = false;
     private Boolean campCheck = false;
+    private int balanceCheck = 0;
+    private double balance, daily;
+    private int [] westBalance, nycBalance, townBalance, commBalance, gradBalance;
+    private int [] westDaily, nycDaily, townDaily, commDaily, gradDaily;
     FirebaseAuth mAuth;
 
 
@@ -48,6 +55,16 @@ private EditText major;
         residency = findViewById(R.id.group_residency);
         mealPlan = findViewById(R.id.spinner_mealplan);
         create = findViewById(R.id.newUserBtn);
+        westBalance = getResources().getIntArray(R.array.west_values);
+        westDaily = getResources().getIntArray(R.array.west_daily);
+        nycBalance = getResources().getIntArray(R.array.nyc_values);
+        nycDaily = getResources().getIntArray(R.array.nyc_daily);
+        townBalance = getResources().getIntArray(R.array.town_values);
+        townDaily = getResources().getIntArray(R.array.town_daily);
+        commBalance = getResources().getIntArray(R.array.comm_values);
+        commDaily = getResources().getIntArray(R.array.comm_daily);
+        gradBalance = getResources().getIntArray(R.array.grad_values);
+        gradDaily = getResources().getIntArray(R.array.grad_daily);
 
 /*Disable UI elements until the user has made a selection
         campus.setEnabled(false);
@@ -68,10 +85,13 @@ private EditText major;
                 if(selected.equals("Commuter")) {
                     resCheck = true;
                     plans = getResources().getStringArray(R.array.commuter_plans);
+                    balanceCheck = 5;
                 }
                 else if(selected.equals("Resident")) {
                     resCheck = false;
                     plans = getResources().getStringArray(R.array.default_plans);
+                    if(balanceCheck == 5)
+                        balanceCheck=0;
 
                     /*if(campCheck)
                     {
@@ -114,19 +134,23 @@ private EditText major;
                     if(selected.equals("Westchester")) {
                         plans = getResources().getStringArray(R.array.west_plans);
                         campCheck = true;
+                        balanceCheck = 1;
                     }
                     else if(selected.equals("Westchester(Townhouses)")) {
                         plans = getResources().getStringArray(R.array.townhouse_plans);
                         campCheck = true;
+                        balanceCheck = 2;
                     }
                     else if(selected.equals("Grad or Law")){
                         plans = getResources().getStringArray(R.array.grad_plans);
                         campCheck = true;
+                        balanceCheck = 3;
                     }
 
                     else if(selected.equals("NYC")){
                         plans = getResources().getStringArray(R.array.nyc_plans);
                         campCheck = true;
+                        balanceCheck = 4;
                     }
 
                     if(plans != null) {
@@ -163,7 +187,34 @@ private EditText major;
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 create.setEnabled(true);
+                switch(balanceCheck) {
+                    case 1:
+                            balance = westBalance[position];
+                            daily = westDaily[position];
+                        break;
 
+                    case 2:
+                        balance = townBalance[position];
+                        daily = townDaily[position];
+                        break;
+
+                    case 3:
+                        balance = gradBalance[position];
+                        daily = gradDaily[position];
+                        break;
+
+                    case 4:
+                        balance = nycBalance[position];
+                        daily = nycDaily[position];
+                        break;
+
+                    case 5:
+                        balance = commBalance[position];
+                        daily = commDaily[position];
+                        break;
+
+
+                }
             }
 
             @Override
@@ -204,12 +255,17 @@ private EditText major;
                 mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+
                         userClass user = dataSnapshot.getValue(userClass.class);
                         user.setMajor(userMajor);
                         user.setResidency(userResidency);
                         user.setCampus(userCampus);
                         user.setYearLevel(userYear);
                         user.setMealplan(userMealPlan);
+                        user.setDollarsPer(Double.valueOf(daily));
+                        user.setBalance(Double.valueOf(balance));
+
 
                         // Update the user's data in the database
                         mDatabase.setValue(user);
