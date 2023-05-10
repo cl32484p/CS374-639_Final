@@ -3,6 +3,9 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <array name="activity_levels">"Sedentary", "Lightly Active", "Moderately Active", "Very Active"</array>
+    <string name="activity_level_prompt">Please select your activity level:</string>
+
     <string-array name="year_levels">
         <item>Select Year</item>
         <item>Freshman</item>
@@ -27,6 +30,7 @@
         <item> Grad and Law: $575.00 ($50 Flex) Daily average $5  </item>
 
     </string-array>
+
 
 
 </resources>
