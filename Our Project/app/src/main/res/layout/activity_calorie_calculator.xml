@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/weightEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="72dp"
+        android:hint="Weight (in kg)"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/heightEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="173dp"
+        android:layout_marginEnd="250dp"
+        android:hint="Height (in cm)"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/ageEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/weightEditText"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="157dp"
+        android:hint="Age"
+        android:inputType="number" />
+
+    <Spinner
+        android:id="@+id/activityLevelSpinner"
+        android:layout_width="326dp"
+        android:layout_height="36dp"
+        android:layout_below="@id/ageEditText"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="33dp"
+        android:entries="@array/activity_levels"
+        android:prompt="@string/activity_level_prompt" />
+
+    <TextView
+        android:id="@+id/calorieIntakeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activityLevelSpinner"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="143dp"
+        android:text="Calorie Intake"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/calorieIntakeTextView"
+        android:layout_alignEnd="@+id/calorieIntakeTextView"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="10dp"
+        android:text="Calculate"
+        android:background="@color/purple_200"
+        android:textColor="@android:color/white"/>
+
+</RelativeLayout>
