@@ -152,7 +152,8 @@
         android:id="@+id/spinner_mealplan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:entries="@array/meal_plans" />
+        android:entries="@array/meal_plans"
+        />
 
     <Button
         android:id="@+id/newUserBtn"

@@ -28,5 +28,213 @@
 
     </string-array>
 
+    <string-array name="default_plans">
+        <item>Select Plan</item>
+        <item>Select or Reselect Campus for more options!</item>
+    </string-array>
+
+
+
+    <string-array name="west_plans">
+        <item>Select Plan</item>
+        <item> Platinum $2,585.00 ($375 Flex) Daily average $25</item>
+        <item> Gold $2,435.00 ($350 Flex) Daily average $23  </item>
+        <item> Silver $2,285.00 ($325 Flex) Daily average $22  </item>
+        <item> Copper $2,135.00 ($225 Flex) Daily average $20  </item>
+        <item> Bronze $2,000.00 ($55 Flex) Daily average $18  </item>
+        <item> Red $1,950.00 ($55 Flex) Daily average $18  </item>
+        <item> Blue $1,075.00 ($105 Flex) Daily average $10  </item>
+        <item> Grad and Law $575.00 ($50 Flex) Daily average $5  </item>
+        <item> Grad and Law Plus $760.00 ($200 Flex) Daily average $7 </item>
+    </string-array>
+
+    <integer-array name="west_values">
+        <item>0</item>
+        <item>2585</item>
+        <item>2435</item>
+        <item>2285</item>
+        <item>2135</item>
+        <item>2000</item>
+        <item>1950</item>
+        <item>1075</item>
+        <item>575</item>
+        <item>760</item>
+    </integer-array>
+
+    <integer-array name="west_daily">
+        <item>0</item>
+        <item>25</item>
+        <item>23</item>
+        <item>22</item>
+        <item>20</item>
+        <item>18</item>
+        <item>18</item>
+        <item>10</item>
+        <item>5</item>
+        <item>7</item>
+    </integer-array>
+
+
+
+    <string-array name="townhouse_plans">
+        <item>Select Plan</item>
+        <item> Platinum $2,585.00 ($375 Flex) Daily average $25</item>
+        <item> Gold $2,435.00 ($350 Flex) Daily average $23  </item>
+        <item> Silver $2,285.00 ($325 Flex) Daily average $22  </item>
+        <item> Copper $2,135.00 ($225 Flex) Daily average $20  </item>
+        <item> Green $525.00 ($50 Flex) Daily average $5  </item>
+        <item> Grad and Law $575.00 ($50 Flex) Daily average $5  </item>
+        <item> Grad and Law Plus $760.00 ($200 Flex) Daily average $7 </item>
+    </string-array>
+
+    <integer-array name="town_values">
+        <item>0</item>
+        <item>2585</item>
+        <item>2435</item>
+        <item>2285</item>
+        <item>2135</item>
+        <item>525</item>
+        <item>575</item>
+        <item>760</item>
+    </integer-array>
+
+    <integer-array name="town_daily">
+        <item>0</item>
+        <item>25</item>
+        <item>23</item>
+        <item>22</item>
+        <item>20</item>
+        <item>5</item>
+        <item>5</item>
+        <item>7</item>
+    </integer-array>
+
+
+
+    <string-array name="nyc_plans">
+        <item>Select Plan</item>
+        <item> Platinum $2,585.00 ($375 Flex) Daily average $25 </item>
+        <item> Gold $2,435.00 ($350 Flex) Daily average $23  </item>
+        <item> Silver $2,285.00 ($325 Flex) Daily average $22  </item>
+        <item> Copper $2,135.00 ($225 Flex) Daily average $20  </item>
+        <item> Bronze $2,000.00 ($55 Flex) Daily average $18  </item>
+        <item> Blue $1,075.00 ($105 Flex) Daily average $10  </item>
+        <item> Green $525.00 ($50 Flex) Daily average $5  </item>
+        <item> Grad and Law $575.00 ($50 Flex) Daily average $5  </item>
+        <item> Grad and Law Plus $760.00 ($200 Flex) Daily average $7 </item>
+    </string-array>
+
+    <integer-array name="nyc_values">
+        <item>0</item>
+        <item>2585</item>
+        <item>2435</item>
+        <item>2285</item>
+        <item>2135</item>
+        <item>2000</item>
+        <item>1075</item>
+        <item>525</item>
+        <item>575</item>
+        <item>760</item>
+    </integer-array>
+
+    <integer-array name="nyc_daily">
+        <item>0</item>
+        <item>25</item>
+        <item>23</item>
+        <item>22</item>
+        <item>20</item>
+        <item>18</item>
+        <item>10</item>
+        <item>5</item>
+        <item>5</item>
+        <item>7</item>
+    </integer-array>
+
+
+
+    <string-array name="commuter_plans">
+        <item>Select Plan</item>
+        <item> Default $300.00 ($50 Flex) Daily average $3 </item>
+        <item> Level 1 $575.00 ($50 Flex) Daily average $5</item>
+        <item> Level 2 $800.00 ($50 Flex) Daily average $7 </item>
+        <item> Level 3 $1,175.00 ($50 Flex) Daily average $11</item>
+        <item> Green $525.00 ($50 Flex) Daily average $5  </item>
+        <item> Grad and Law $575.00 ($50 Flex) Daily average $5 </item>
+        <item> Grad and Law Plus $760.00 ($200 Flex) Daily average $7 </item>
+    </string-array>
+
+
+    <integer-array name="comm_values">
+        <item>0</item>
+        <item>300</item>
+        <item>575</item>
+        <item>800</item>
+        <item>1175</item>
+        <item>525</item>
+        <item>575</item>
+        <item>760</item>
+    </integer-array>
+
+    <integer-array name="comm_daily">
+        <item>0</item>
+        <item>3</item>
+        <item>5</item>
+        <item>7</item>
+        <item>11</item>
+        <item>5</item>
+        <item>5</item>
+        <item>7</item>
+    </integer-array>
+
+
+
+    <string-array name="grad_plans">
+        <item>Select Plan</item>
+        <item> Default $575.00 ($50 Flex) Daily average $5</item>
+        <item> Platinum $2,585.00 ($375 Flex) Daily average $25</item>
+        <item> Gold $2,435.00 ($350 Flex) Daily average $23  </item>
+        <item> Silver $2,285.00 ($325 Flex) Daily average $22  </item>
+        <item> Copper $2,135.00 ($225 Flex) Daily average $20  </item>
+        <item> Bronze $2,000.00 ($55 Flex) Daily average $18  </item>
+        <item> Red $1,950.00 ($55 Flex) Daily average $18  </item>
+        <item> Blue $1,075.00 ($105 Flex) Daily average $10  </item>
+        <item> Green $525.00 ($50 Flex) Daily average $5  </item>
+        <item> Grad and Law $575.00 ($50 Flex) Daily average $5 </item>
+        <item> Grad and Law Plus $760.00 ($200 Flex) Daily average $7 </item>
+    </string-array>
+
+
+    <integer-array name="grad_values">
+        <item>0</item>
+        <item>575</item>
+        <item>2585</item>
+        <item>2435</item>
+        <item>2285</item>
+        <item>2135</item>
+        <item>2000</item>
+        <item>1950</item>
+        <item>1075</item>
+        <item>525</item>
+        <item>575</item>
+        <item>760</item>
+    </integer-array>
+
+    <integer-array name="grad_daily">
+        <item>0</item>
+        <item>5</item>
+        <item>25</item>
+        <item>23</item>
+        <item>22</item>
+        <item>20</item>
+        <item>18</item>
+        <item>18</item>
+        <item>10</item>
+        <item>5</item>
+        <item>5</item>
+        <item>7</item>
+    </integer-array>
+
+
+
 
 </resources>
