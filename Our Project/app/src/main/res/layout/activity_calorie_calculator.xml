@@ -12,6 +12,8 @@
         android:layout_marginStart="33dp"
         android:layout_marginTop="72dp"
         android:hint="Weight (in kg)"
+        android:textColorHint= "#072BE1"
+        android:backgroundTint="@color/purple_200"
         android:inputType="numberDecimal" />
 
     <EditText
@@ -23,6 +25,8 @@
         android:layout_marginTop="173dp"
         android:layout_marginEnd="250dp"
         android:hint="Height (in cm)"
+        android:textColorHint= "#072BE1"
+        android:backgroundTint="@color/purple_200"
         android:inputType="numberDecimal" />
 
     <EditText
@@ -34,6 +38,8 @@
         android:layout_marginStart="49dp"
         android:layout_marginTop="157dp"
         android:hint="Age"
+        android:backgroundTint="@color/purple_200"
+        android:textColorHint= "#072BE1"
         android:inputType="number" />
 
     <Spinner
@@ -56,6 +62,8 @@
         android:layout_marginTop="56dp"
         android:layout_marginEnd="143dp"
         android:text="Calorie Intake"
+        android:background="@color/purple_200"
+        android:textColor= "@color/white"
         android:textSize="24sp" />
 
     <Button
