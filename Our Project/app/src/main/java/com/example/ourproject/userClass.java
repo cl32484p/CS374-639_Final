@@ -3,6 +3,7 @@ package com.example.ourproject;
 public class userClass {
 
     String name, major, age, weight, height, yearLevel, mealPlan, residency, campus,  activityLevel, password, email;
+    int transactions;
     Double balance, dollarsPer, calories;
 
     public  userClass(){
@@ -24,6 +25,7 @@ public class userClass {
         this.residency = residency;
         this.campus = campus;
         this.yearLevel = yearLevel;
+        transactions = 0;
     }
 
 
@@ -86,6 +88,13 @@ public class userClass {
         this.residency = residency;
     }
 
+    public int getTransactions() {
+        return transactions;
+    }
+
+    public void setTransactions(int transactions) {
+        this.transactions = transactions;
+    }
 
     public String getCampus() {
         return campus;

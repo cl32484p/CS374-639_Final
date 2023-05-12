@@ -23,6 +23,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
@@ -126,6 +127,8 @@ public class editBalance extends AppCompatActivity {
                 balDbl = formatDouble(balDbl);
                 setColor(getApplicationContext(),difference,differenceDPD, newBal, newDollars,save);
                 setBalance(mDatabase, balDbl,newDPD);
+                today = new Date();
+                updateDatabase(mDatabase,today,difference,differenceDPD,balDbl,newDPD);
                 Intent intent = new Intent(editBalance.this, Home.class);
                 startActivity(intent);
 
@@ -244,7 +247,68 @@ public static void setColor(Context context, Double difference, Double differenc
 }
 
 
-public static void updateDatabase(){
+public static void updateDatabase(DatabaseReference mDatabase, Date today, Double difference, Double differenceDPD, Double balDbl, Double newDPD){
+    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss a");
+    String date = dateFormat.format(today);
+
+
+    mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+        @Override
+        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+            userClass currentUser = dataSnapshot.getValue(userClass.class);
+
+            int transactions;
+
+
+            transactions = currentUser.getTransactions()+1;
+            String title = "Transaction: " + transactions;
+
+            if(difference == 0)
+            {
+                String hisTitle ="Transaction: " + transactions + "Balance: " + balDbl + "( " + difference + ") Dollers Per Day: " + newDPD + "( " + differenceDPD + ") Date: " + date;
+            }
+
+            else if(difference > 0)
+            {
+                String hisTitle ="Transaction: " + transactions + "";
+            }
+
+            else if(difference < 0)
+            {
+                if(differenceDPD < 0)
+                {
+                    String hisTitle ="Transaction: " + transactions + "";
+                }
+
+                else if (differenceDPD>0){
+                    String hisTitle ="Transaction: " + transactions + "";
+                }
+
+                else if (differenceDPD==0){
+                    String hisTitle ="Transaction: " + transactions + "";
+                }
+
+            }
+
+
+            String hisTitle ="Transaction: " + transactions + "";
+            transactionClass transaction = new transactionClass(balDbl,difference,newDPD,differenceDPD,today,title);
+            currentUser.setTransactions(transactions);
+
+            mDatabase.setValue(currentUser);
+            mDatabase.child("history").child(title).setValue(transaction);
+
+
+        }
+
+        @Override
+        public void onCancelled(@NonNull DatabaseError databaseError) {
+            // Handle database read error
+        }
+    });
+
+
+
 
 }
 
