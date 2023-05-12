@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="sea_grill_1">Egg and Cheese on a Roll with Small Coffee. </string>
+    <string name="sea_grill_2">Meat,Egg,and Cheese on a Roll with Small Coffee. </string>
+    <string name="salad">Salad w/ 1 Protein and 2 Toppings or Salad w/ 4 Toppings + a 20oz Soda or Dosani.</string>
+    <string name="Smoothie">12oz. Strawberry Banana Smoothie w/ 1 Scoop of Protein.</string>
+    <string name="alferno_1">Pasta with 3 Veggie Toppings and 20oz Soda or Water.</string>
+    <string name="alferno_2">Personal Cheese Pizza + 20oz Soda or Water.</string>
+    <string name="alferno_3"> Cheese Slice</string>
+    <string name="Coffe">Salad w/ 1 Protein and 2 Toppings or Salad with 4 Toppings.</string>
+    <string name="Coffe2">20oz Dasani or Soda.</string>
+
+</resources>
+
