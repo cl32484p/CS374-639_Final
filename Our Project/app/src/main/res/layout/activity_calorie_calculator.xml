@@ -123,4 +123,13 @@
         android:text="Calculate"
         android:textColor="@android:color/white" />
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/calculateButton"
+        android:layout_marginTop="17dp"
+        android:src="@drawable/logo"
+        android:layout_alignParentBottom="true"
+        />
+
 </RelativeLayout>

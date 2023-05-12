@@ -16,6 +16,12 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        Button viewTransactionHistory = findViewById(R.id.viewTransactionHistory);
+        viewTransactionHistory.setOnClickListener(view -> {
+            Intent intent = new Intent(Home.this, CalorieCalculatorActivity.class);
+            startActivity(intent);
+        });
+
         Button calorieCalculatorButton = findViewById(R.id.calorieCalculatorButton);
         calorieCalculatorButton.setOnClickListener(view -> {
                 Intent intent = new Intent(Home.this, CalorieCalculatorActivity.class);
