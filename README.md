@@ -12,7 +12,7 @@ Freddy ![Freddy](https://user-images.githubusercontent.com/78415690/233870133-b8
 
 Cj Lugo ![WhatsApp Image 2023-04-23 at 6 34 08 PM](https://user-images.githubusercontent.com/78415690/233869993-7e4e7ad3-26b6-4f38-beff-bb1b6fd4609e.jpeg)
 
-Shaki singh ![download](https://user-images.githubusercontent.com/78415690/233870195-13f223cb-3f15-4e9b-8066-09b44948ab37.png)
+Shakti Singh ![download](https://user-images.githubusercontent.com/78415690/233870195-13f223cb-3f15-4e9b-8066-09b44948ab37.png)
 
 ## Idea prposal and Research 
 
@@ -33,14 +33,14 @@ Shaki singh ![download](https://user-images.githubusercontent.com/78415690/23387
 
 ### Sprint 2 
 
-* [Sprint Planning]
-* [Scrums]
+* [Sprint Planning](https://docs.google.com/document/d/1ZlfdA0GYv4EwY4Q3WgzRPedhIh2oyHHxo5CiuDEIvl8/edit)
+* [Scrums](https://docs.google.com/document/d/1-Yl3fZahjLiyeS7mO8Nu5Cr3PFlCQSI72sZKxibKsFk/edit)
 * [Sprint demo video]
 * [Sprint retrospective]
 
 ### Sprint 3
-* [Sprint Planning]
-* [Scrums]
+* [Sprint Planning](https://docs.google.com/document/d/1ZlfdA0GYv4EwY4Q3WgzRPedhIh2oyHHxo5CiuDEIvl8/edit)
+* [Scrums](https://docs.google.com/document/d/1-Yl3fZahjLiyeS7mO8Nu5Cr3PFlCQSI72sZKxibKsFk/edit)
 * [Sprint demo video]
 * [Sprint retrospective]
 
