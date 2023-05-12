@@ -3,6 +3,13 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+
+    <array name="activity_levels">"Sedentary", "Lightly Active", "Moderately Active", "Very
+        Active"
+    </array>
+    <string name="activity_level_prompt">Please select your activity level:</string>
+
+
     <string-array name="year_levels">
         <item>Select Year</item>
         <item>Freshman</item>
@@ -32,7 +39,6 @@
         <item>Select Plan</item>
         <item>Select or Reselect Campus for more options!</item>
     </string-array>
-
 
 
     <string-array name="west_plans">
@@ -75,7 +81,6 @@
     </integer-array>
 
 
-
     <string-array name="townhouse_plans">
         <item>Select Plan</item>
         <item> Platinum $2,585.00 ($375 Flex) Daily average $25</item>
@@ -108,7 +113,6 @@
         <item>5</item>
         <item>7</item>
     </integer-array>
-
 
 
     <string-array name="nyc_plans">
@@ -151,7 +155,6 @@
     </integer-array>
 
 
-
     <string-array name="commuter_plans">
         <item>Select Plan</item>
         <item> Default $300.00 ($50 Flex) Daily average $3 </item>
@@ -185,7 +188,6 @@
         <item>5</item>
         <item>7</item>
     </integer-array>
-
 
 
     <string-array name="grad_plans">
@@ -233,8 +235,6 @@
         <item>5</item>
         <item>7</item>
     </integer-array>
-
-
 
 
 </resources>
