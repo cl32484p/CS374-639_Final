@@ -15,7 +15,7 @@ public class Home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        
+
         Button calorieCalculatorButton = findViewById(R.id.calorieCalculatorButton);
         calorieCalculatorButton.setOnClickListener(view -> {
                 Intent intent = new Intent(Home.this, CalorieCalculatorActivity.class);

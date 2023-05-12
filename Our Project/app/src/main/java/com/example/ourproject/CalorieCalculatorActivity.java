@@ -47,7 +47,7 @@ public class CalorieCalculatorActivity extends AppCompatActivity {
 
         // Calculate calorie intake
         double bmr = 10 * weight + 6.25 * height - 5 * age + 5;
-        double calorieIntake = bmr * activityLevel;
+        double calorieIntake = bmr * (activityLevel);
 
         // Display the result
         calorieIntakeTextView.setText(String.format("%.2f", calorieIntake));

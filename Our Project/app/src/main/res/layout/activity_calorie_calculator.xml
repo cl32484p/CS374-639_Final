@@ -9,19 +9,21 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="77dp"
         android:hint="Weight (in kg)"
         android:inputType="numberDecimal" />
 
     <EditText
         android:id="@+id/heightEditText"
-        android:layout_width="wrap_content"
+        android:layout_width="136dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="173dp"
-        android:layout_marginEnd="250dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="178dp"
+        android:layout_marginEnd="234dp"
         android:hint="Height (in cm)"
         android:inputType="numberDecimal" />
 
@@ -31,10 +33,60 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/weightEditText"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="49dp"
-        android:layout_marginTop="157dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="145dp"
         android:hint="Age"
         android:inputType="number" />
+
+    <TextView
+        android:id="@+id/text_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activityLevelSpinner"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="-65dp"
+        android:text="Select your activity level:"
+        android:textColor="@color/purple_200"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text_activity2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heightEditText"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="-10dp"
+        android:layout_marginBottom="-10dp"
+        android:text="Enter Age:"
+        android:textColor="@color/purple_200"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text_activity3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heightEditText"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="-74dp"
+        android:layout_marginEnd="-10dp"
+        android:layout_marginBottom="-10dp"
+        android:text="Enter Height (in cms):"
+        android:textColor="@color/purple_200"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text_activity4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heightEditText"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="-163dp"
+        android:layout_marginEnd="-10dp"
+        android:layout_marginBottom="-10dp"
+        android:text="Enter Weight (in kgs):"
+        android:textColor="@color/purple_200"
+        android:textStyle="bold" />
 
     <Spinner
         android:id="@+id/activityLevelSpinner"
@@ -42,10 +94,10 @@
         android:layout_height="36dp"
         android:layout_below="@id/ageEditText"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="49dp"
-        android:layout_marginTop="33dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="52dp"
         android:entries="@array/activity_levels"
-        android:prompt="@string/activity_level_prompt" />
+        android:textColor="#072BE1" />
 
     <TextView
         android:id="@+id/calorieIntakeTextView"
@@ -53,21 +105,22 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/activityLevelSpinner"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="143dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="61dp"
+        android:layout_marginEnd="153dp"
         android:text="Calorie Intake"
         android:textSize="24sp" />
 
     <Button
         android:id="@+id/calculateButton"
-        android:layout_width="wrap_content"
+        android:layout_width="113dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/calorieIntakeTextView"
         android:layout_alignEnd="@+id/calorieIntakeTextView"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="68dp"
         android:layout_marginEnd="10dp"
+        android:background="@drawable/button_background"
         android:text="Calculate"
-        android:background="@color/purple_200"
-        android:textColor="@android:color/white"/>
+        android:textColor="@android:color/white" />
 
 </RelativeLayout>
