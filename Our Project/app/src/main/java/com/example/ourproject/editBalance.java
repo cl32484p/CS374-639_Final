@@ -25,6 +25,8 @@ import com.google.firebase.database.ValueEventListener;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 public class editBalance extends AppCompatActivity {
@@ -90,7 +92,8 @@ public class editBalance extends AppCompatActivity {
                difference = formatDouble(difference);
                differenceDPD = formatDouble(differenceDPD);
                 newDollars.setText(String.valueOf(newDPD));
-                             setColor(getApplicationContext(),difference,differenceDPD, newBal, newDollars,save);
+                             SetColorTask  setColorTask = new SetColorTask(getApplicationContext(),difference,differenceDPD, newBal, newDollars,save);
+                             setColorTask.execute();
 
 
 
@@ -125,10 +128,15 @@ public class editBalance extends AppCompatActivity {
                 difference = formatDouble(difference);
                 differenceDPD = formatDouble(differenceDPD);
                 balDbl = formatDouble(balDbl);
-                setColor(getApplicationContext(),difference,differenceDPD, newBal, newDollars,save);
-                setBalance(mDatabase, balDbl,newDPD);
-                today = new Date();
-                updateDatabase(mDatabase,today,difference,differenceDPD,balDbl,newDPD);
+                SetColorTask setColorTask = new SetColorTask(getApplicationContext(), difference, differenceDPD, newBal, newDollars, save);
+                setColorTask.execute();
+                //setColor(getApplicationContext(),difference,differenceDPD, newBal, newDollars,save);
+                Log.d("MyApp", "The value of balDbl is "+ balDbl);
+              //  setBalance(mDatabase, balDbl,newDPD);
+               today = new Date();
+                new UpdateDatabaseTask(mDatabase, today, difference, differenceDPD, balDbl, newDPD).execute();
+
+               // updateDatabase(mDatabase,today,difference,differenceDPD,balDbl,newDPD);
                 Intent intent = new Intent(editBalance.this, Home.class);
                 startActivity(intent);
 
@@ -161,13 +169,14 @@ public class editBalance extends AppCompatActivity {
         });
     }
 
-    public static void setBalance(DatabaseReference mDatabase,Double balDbl, Double newDPD) {
+   /* public static void setBalance(DatabaseReference mDatabase,Double balDbl, Double newDPD) {
         //Update the Current Balance and Dollars Per Day for the Current User
         mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 userClass currentUser = dataSnapshot.getValue(userClass.class);
                 currentUser.setBalance(balDbl);
+
                 currentUser.setDollarsPer(newDPD);
 
                 mDatabase.setValue(currentUser);
@@ -180,9 +189,9 @@ public class editBalance extends AppCompatActivity {
                 // Handle database read error
             }
         });
-    }
+    } */
 
-public static void setColor(Context context, Double difference, Double differenceDPD,TextView newBal, TextView newDollars, Button save)
+ /*public static void setColor(Context context, Double difference, Double differenceDPD,TextView newBal, TextView newDollars, Button save)
 {
     String newBalanceStr = newBal.getText().toString() + " ("+ String.valueOf(difference) + ")";
     String newDollarsStr = newDollars.getText().toString() + " (" + String.valueOf(differenceDPD + ")");
@@ -245,8 +254,8 @@ public static void setColor(Context context, Double difference, Double differenc
     }
 
 }
-
-
+*/
+/*
 public static void updateDatabase(DatabaseReference mDatabase, Date today, Double difference, Double differenceDPD, Double balDbl, Double newDPD){
     SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss a");
     String date = dateFormat.format(today);
@@ -262,41 +271,49 @@ public static void updateDatabase(DatabaseReference mDatabase, Date today, Doubl
 
             transactions = currentUser.getTransactions()+1;
             String title = "Transaction: " + transactions;
-
+            String hisTitle = "";
             if(difference == 0)
             {
-                String hisTitle ="Transaction: " + transactions + "Balance: " + balDbl + "( " + difference + ") Dollers Per Day: " + newDPD + "( " + differenceDPD + ") Date: " + date;
+                hisTitle ="Transaction: " + transactions + "Balance: " + balDbl + "( " + difference + ") Dollers Per Day: " + newDPD + "( " + differenceDPD + ") Date: " + date;
             }
 
             else if(difference > 0)
             {
-                String hisTitle ="Transaction: " + transactions + "";
+                hisTitle ="Transaction: " + transactions + "Balance: " + balDbl + "(+ " + difference + ") Dollers Per Day: " + newDPD + "(+ " + differenceDPD + ") Date: " + date;
             }
 
             else if(difference < 0)
             {
                 if(differenceDPD < 0)
                 {
-                    String hisTitle ="Transaction: " + transactions + "";
+
+                     hisTitle ="Transaction: " + transactions + "Balance: " + balDbl + "( " + difference + ") Dollers Per Day: " + newDPD + "( " + differenceDPD + ") Date: " + date;
                 }
 
                 else if (differenceDPD>0){
-                    String hisTitle ="Transaction: " + transactions + "";
+                    hisTitle ="Transaction: " + transactions + "Balance: " + balDbl + "( " + difference + ") Dollers Per Day: " + newDPD + "(+ " + differenceDPD + ") Date: " + date;
                 }
 
                 else if (differenceDPD==0){
-                    String hisTitle ="Transaction: " + transactions + "";
+                    hisTitle ="Transaction: " + transactions + "Balance: " + balDbl + "( " + difference + ") Dollers Per Day: " + newDPD + "( " + differenceDPD + ") Date: " + date;
                 }
 
             }
 
 
-            String hisTitle ="Transaction: " + transactions + "";
-            transactionClass transaction = new transactionClass(balDbl,difference,newDPD,differenceDPD,today,title);
-            currentUser.setTransactions(transactions);
+
+            transactionClass transaction = new transactionClass(balDbl,difference,newDPD,differenceDPD,date,title);
+            String key = mDatabase.child("history").push().getKey();
+            Map<String, Object> postValues = transaction.toMap();
+
+            Map<String, Object> childUpdates = new HashMap<>();
+            childUpdates.put("/history/" + key, postValues);
+            mDatabase.updateChildren(childUpdates);
 
             mDatabase.setValue(currentUser);
-            mDatabase.child("history").child(title).setValue(transaction);
+          //  DatabaseReference historyRef = mDatabase.child("history");
+            //String key = historyRef.push().getKey();
+           // historyRef.child(key).setValue(transaction);
 
 
         }
@@ -310,7 +327,7 @@ public static void updateDatabase(DatabaseReference mDatabase, Date today, Doubl
 
 
 
-}
+} */
 
 public static Double formatDouble(Double dub)
 {

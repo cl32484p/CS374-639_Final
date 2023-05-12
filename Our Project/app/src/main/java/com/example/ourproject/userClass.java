@@ -1,10 +1,13 @@
 package com.example.ourproject;
 
+import java.util.Map;
+
 public class userClass {
 
     String name, major, age, weight, height, yearLevel, mealPlan, residency, campus,  activityLevel, password, email;
     int transactions;
     Double balance, dollarsPer, calories;
+    private Map<String, Object> history;
 
     public  userClass(){
 
@@ -28,8 +31,17 @@ public class userClass {
         transactions = 0;
     }
 
+    public userClass(Map<String, Object> history) {
+        this.history = history;
+    }
 
+    public Map<String, Object> getHistory() {
+        return history;
+    }
 
+    public void setHistory(Map<String, Object> history) {
+        this.history = history;
+    }
 
 
     public String getName() {

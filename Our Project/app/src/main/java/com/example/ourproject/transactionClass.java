@@ -1,24 +1,27 @@
 package com.example.ourproject;
 
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 public class transactionClass {
 
     Double balance, difference, dollersPer, dollarsPerDifference;
-    Date date;
-    String title;
+    String date;
+    String title, hisTitle;
 
     public transactionClass(){
 
     }
 
-    public transactionClass(Double balance, Double difference, Double dollarsPer, Double dollarsPerDifference, Date date, String title) {
+    public transactionClass(Double balance, Double difference, Double dollarsPer, Double dollarsPerDifference, String date, String title) {
         this.balance = balance;
         this.difference = difference;
         this.dollersPer = dollarsPer;
         this.dollarsPerDifference = dollarsPerDifference;
         this.date = date;
         this.title = title;
+       // this.hisTitle = hisTitle;
     }
 
     public String getTitle() {
@@ -61,11 +64,25 @@ public class transactionClass {
         this.dollarsPerDifference = dollarsPerDifference;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
+
+    public Map<String, Object> toMap() {
+        HashMap<String, Object> result = new HashMap<>();
+        result.put("balDbl", balance);
+        result.put("difference", difference);
+        result.put("newDPD", dollersPer);
+        result.put("differenceDPD", dollarsPerDifference);
+        result.put("date", date);
+        result.put("title", title);
+
+        return result;
+    }
+
+
 }
