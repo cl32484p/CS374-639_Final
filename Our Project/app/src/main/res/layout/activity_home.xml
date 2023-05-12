@@ -1,9 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Home">
+    android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/balanceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/offersButton"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-16dp"
+        android:layout_marginTop="136dp"
+        android:text="Current Balance: $0.00"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/calorieCalculatorButton"
+        android:layout_width="249dp"
+        android:layout_height="61dp"
+        android:layout_below="@+id/balanceTextView"
+        android:layout_alignStart="@+id/balanceTextView"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="122dp"
+        android:background="@drawable/button_background"
+        android:text="Calorie Calculator"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/offersButton"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/calorieCalculatorButton"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_background"
+        android:text="Offers"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/transactionsButton"
+        android:layout_width="246dp"
+        android:layout_height="59dp"
+        android:layout_below="@id/offersButton"
+        android:layout_alignStart="@+id/offersButton"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="43dp"
+        android:background="@drawable/button_background"
+        android:text="Transactions"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/profileButton"
+        android:layout_width="247dp"
+        android:layout_height="63dp"
+        android:layout_below="@id/transactionsButton"
+        android:layout_alignStart="@+id/transactionsButton"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="41dp"
+        android:background="@drawable/button_background"
+        android:text="Profile"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+</RelativeLayout>
