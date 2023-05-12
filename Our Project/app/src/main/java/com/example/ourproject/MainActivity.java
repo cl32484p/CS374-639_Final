@@ -20,6 +20,10 @@ register = findViewById(R.id.SIGNUP);
 login = findViewById(R.id.LOGIN);
 
 
+
+
+
+
 //start SignUp
 register.setOnClickListener(new View.OnClickListener() {
     @Override
