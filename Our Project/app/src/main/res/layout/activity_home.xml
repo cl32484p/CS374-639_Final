@@ -3,6 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+
     <TextView
         android:id="@+id/balanceTextView"
         android:layout_width="wrap_content"
@@ -13,6 +15,19 @@
         android:layout_marginTop="136dp"
         android:text="Current Balance: $0.00"
         android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/viewTransactionHistory"
+        android:layout_width="199dp"
+        android:layout_height="26dp"
+        android:layout_below="@+id/balanceTextView"
+        android:layout_alignStart="@+id/balanceTextView"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/cardview_dark_background"
+        android:text="View Transactions"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/calorieCalculatorButton"
@@ -49,7 +64,7 @@
         android:layout_marginStart="2dp"
         android:layout_marginTop="43dp"
         android:background="@drawable/button_background"
-        android:text="Transactions"
+        android:text="ADD Balance"
         android:textColor="#FFFFFF"
         android:textSize="18sp" />
 
