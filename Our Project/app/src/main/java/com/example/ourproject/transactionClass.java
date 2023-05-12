@@ -14,14 +14,22 @@ public class transactionClass {
 
     }
 
-    public transactionClass(Double balance, Double difference, Double dollarsPer, Double dollarsPerDifference, String date, String title) {
+    public transactionClass(Double balance, Double difference, Double dollarsPer, Double dollarsPerDifference, String date, String title, String hisTitle) {
         this.balance = balance;
         this.difference = difference;
         this.dollersPer = dollarsPer;
         this.dollarsPerDifference = dollarsPerDifference;
         this.date = date;
         this.title = title;
-       // this.hisTitle = hisTitle;
+        this.hisTitle = hisTitle;
+    }
+
+    public String getHisTitle() {
+        return hisTitle;
+    }
+
+    public void setHisTitle(String hisTitle) {
+        this.hisTitle = hisTitle;
     }
 
     public String getTitle() {
@@ -80,6 +88,7 @@ public class transactionClass {
         result.put("differenceDPD", dollarsPerDifference);
         result.put("date", date);
         result.put("title", title);
+        result.put("hisTitle", hisTitle);
 
         return result;
     }

@@ -1,6 +1,7 @@
 package com.example.ourproject;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -20,7 +21,7 @@ public class Home extends AppCompatActivity {
     private TextView balanceTextView, dollarsPerTextView;
     FirebaseAuth mAuth;
     Double balance, dollarsPer;
-
+    private Button history;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +32,7 @@ public class Home extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser user = mAuth.getCurrentUser();
         String userId = user.getUid();
-
+        history = findViewById(R.id.historyButton);
 
         DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("users").child(userId);
         mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -79,5 +80,18 @@ public class Home extends AppCompatActivity {
             Intent intent = new Intent(Home.this, CalorieCalculatorActivity.class);
             startActivity(intent);
         });
+
+        history.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Home.this, History.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
+
     }
 }
