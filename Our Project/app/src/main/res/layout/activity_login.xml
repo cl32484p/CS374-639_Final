@@ -30,6 +30,8 @@
         android:hint="Email"
         android:inputType="textEmailAddress" />
 
+    <!-- Login Button -->
+
     <EditText
         android:id="@+id/password_field"
         android:layout_width="349dp"
@@ -37,12 +39,10 @@
         android:layout_below="@+id/email_field"
         android:layout_alignParentBottom="true"
         android:layout_marginHorizontal="32dp"
-        android:layout_marginTop="45dp"
-        android:layout_marginBottom="206dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="210dp"
         android:hint="Password"
         android:inputType="textPassword" />
-
-    <!-- Login Button -->
 
     <Button
         android:id="@+id/login_button"
@@ -53,9 +53,9 @@
         android:text="Login"
         android:textColor="@android:color/white" />
 
-    <!-- Sign Up Text -->
-    <TextView
-        android:id="@+id/signup_text"
+    <!-- Sign Up Button -->
+    <Button
+        android:id="@+id/signup_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@id/login_button"

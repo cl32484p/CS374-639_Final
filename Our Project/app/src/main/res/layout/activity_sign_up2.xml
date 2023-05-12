@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/progressBarText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Complete Profile"
+        android:textSize="28dp"
+        android:textColor="@color/purple_200"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        />
+
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="0" />
+
+
+
+
+    <TextView
+        android:id="@+id/text_major"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter your major:"
+        android:textStyle="bold"
+        android:textColor="@color/purple_200"/>
+
+    <EditText
+        android:id="@+id/edit_major"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/text_residency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select your residency status:"
+        android:textColor="@color/purple_200"
+        android:textStyle="bold"/>
+
+    <RadioGroup
+        android:id="@+id/group_residency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/button_resident"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resident"
+            android:textColor="#072BE1"/>
+
+        <RadioButton
+            android:id="@+id/button_nonresident"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Commuter"
+            android:textColor="#072BE1"/>
+
+    </RadioGroup>
+
+
+
+    <TextView
+        android:id="@+id/text_campus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select your campus:"
+        android:textStyle="bold"
+        android:textColor="@color/purple_200"/>
+
+    <RadioGroup
+        android:id="@+id/group_campus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <RadioButton
+            android:id="@+id/button_campus1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Westchester"
+            android:textColor="#072BE1"/>
+
+        <RadioButton
+            android:id="@+id/button_campus12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Westchester(Townhouses)"
+            android:textColor="#072BE1"/>
+
+        <RadioButton
+            android:id="@+id/button_campus2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NYC"
+            android:textColor="#072BE1"/>
+
+        <RadioButton
+            android:id="@+id/button_campus3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grad or Law"
+            android:textColor="#072BE1"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/text_year"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select your year level:"
+        android:textStyle="bold"
+        android:textColor="@color/purple_200"/>
+
+    <Spinner
+        android:id="@+id/spinner_year"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/year_levels"
+        android:textColor="#072BE1"/>
+
+
+
+    <TextView
+        android:id="@+id/text_mealplan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select your meal plan:"
+        android:textStyle="bold"
+        android:textColor="@color/purple_200"/>
+
+    <Spinner
+        android:id="@+id/spinner_mealplan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/meal_plans"
+        />
+
+    <Button
+        android:id="@+id/newUserBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create Account"
+        android:textStyle="bold"
+        android:backgroundTint="@color/purple_200"
+        android:textColor="@color/blue"/>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/food" />
+
+
+</LinearLayout>
