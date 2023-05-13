@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Profile Image -->
+
+    <!-- Full Name Edit Text -->
+
+    <!-- Email Edit Text -->
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="28dp"
+        app:srcCompat="@drawable/logo" />
+
+    <EditText
+        android:id="@+id/full_name"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="11dp"
+        android:hint="Full Name" />
+
+    <!-- Password Edit Text -->
+    <EditText
+        android:id="@+id/email_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/full_name"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="9dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress" />
+
+    <!-- Major Text View -->
+
+    <!-- Major Edit Text -->
+
+    <EditText
+        android:id="@+id/password_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/email_field"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="13dp"
+        android:hint="Password"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/text_major"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password_field"
+        android:layout_marginTop="12dp"
+        android:text="Enter your major:"
+        android:layout_marginHorizontal="32dp"
+        android:textColor="@color/purple_200"
+        android:textStyle="bold"
+        android:layout_alignParentRight="true"/>
+
+    <!-- Residency Text View -->
+    <EditText
+        android:id="@+id/edit_major"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_major"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="-3dp"
+        android:inputType="text" />
+
+    <!-- Residency Radio Group -->
+
+    <TextView
+        android:id="@+id/text_residency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_major"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="6dp"
+        android:text="Select your residency status:"
+        android:textColor="@color/purple_200"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/group_residency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_residency"
+        android:layout_marginHorizontal="32dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/button_resident"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resident"
+            android:textColor="#072BE1" />
+
+        <RadioButton
+            android:id="@+id/button_nonresident"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Commuter"
+            android:textColor="#072BE1" />
+
+    </RadioGroup>
+
+    <!-- Campus Text View -->
+    <TextView
+        android:id="@+id/text_campus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/group_residency"
+        android:layout_marginTop="16dp"
+        android:text="Select your campus:"
+        android:layout_marginHorizontal="32dp"
+        android:textStyle="bold"
+        android:textColor="@color/purple_200" />
+
+    <!-- Campus Radio Group -->
+    <RadioGroup
+        android:id="@+id/group_campus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_campus"
+        android:layout_marginHorizontal="32dp"
+
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/button_campus1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Westchester"
+            android:textColor="#072BE1" />
+
+        <RadioButton
+            android:id="@+id/button_campus12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Westchester(Townhouses)"
+            android:textColor="#072BE1" />
+
+        <RadioButton
+            android:id="@+id/button_campus2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NYC"
+            android:textColor="#072BE1" />
+
+        <RadioButton
+            android:id="@+id/button_campus3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grad or Law"
+            android:textColor="#072BE1" />
+
+    </RadioGroup>
+
+    <!-- Year Text View -->
+    <TextView
+        android:id="@+id/text_year"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/group_campus"
+        android:layout_marginTop="16dp"
+        android:text="Select your year level:"
+        android:layout_marginHorizontal="32dp"
+        android:textStyle="bold"
+        android:textColor="@color/purple_200" />
+
+    <!-- Year Spinner -->
+    <Spinner
+        android:id="@+id/spinner_year"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_year"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="8dp"
+        android:textColor="#072BE1"
+        android:entries="@array/year_levels" />
+
+    <!-- Meal Plan Text View -->
+    <TextView
+        android:id="@+id/text_mealplan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner_year"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="32dp"
+        android:text="Select your meal plan:"
+        android:textStyle="bold"
+        android:textColor="@color/purple_200" />
+
+    <!-- Meal Plan Spinner -->
+
+    <!-- Update Button -->
+
+    <Spinner
+        android:id="@+id/spinner_mealplan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_mealplan"
+        android:layout_alignStart="@+id/text_mealplan"
+
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginhorizontal="32dp"
+        android:entries="@array/meal_plans"
+        android:textColor="#072BE1" />
+
+    <Button
+        android:id="@+id/update_button"
+        android:layout_width="342dp"
+        android:layout_height="29dp"
+        android:layout_below="@+id/spinner_mealplan"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="18dp"
+        android:background="@color/purple_200"
+        android:text="Update Profile"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+</LinearLayout>
+
