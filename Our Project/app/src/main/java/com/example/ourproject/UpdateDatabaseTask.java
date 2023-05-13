@@ -6,10 +6,13 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.text.SimpleDateFormat;
@@ -25,6 +28,7 @@ public class UpdateDatabaseTask extends AsyncTask<Void, Void, transactionClass> 
     private Double balDbl;
     private Double newDPD;
     private int transactions;
+    FirebaseAuth mAuth;
 
     public UpdateDatabaseTask(DatabaseReference mDatabase, Date today, Double difference, Double differenceDPD, Double balDbl, Double newDPD) {
         this.mDatabase = mDatabase;
@@ -39,12 +43,18 @@ public class UpdateDatabaseTask extends AsyncTask<Void, Void, transactionClass> 
     protected transactionClass doInBackground(Void... params) {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss a");
         String date = dateFormat.format(today);
+       // mAuth = FirebaseAuth.getInstance();
+       // FirebaseUser user = mAuth.getCurrentUser();
+       // String userId = user.getUid();
+
+
+       // DatabaseReference hisDatabase = FirebaseDatabase.getInstance().getReference("users").child(userId).child("history");
 
         mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-userClass currentUser = dataSnapshot.getValue(userClass.class);
+                            userClass currentUser = dataSnapshot.getValue(userClass.class);
 
 
 
@@ -59,20 +69,20 @@ userClass currentUser = dataSnapshot.getValue(userClass.class);
                                                                  Log.d("MyApp", "The value of title is "+ title);
                                                                  String hisTitle = "Placer";
                                                                  if (difference == 0) {
-                                                                     hisTitle = "Transaction: " + transactions + "Balance: " + balDbl + "( " + difference + ") Dollers Per Day: " + newDPD + "( " + differenceDPD + ") Date: " + date;
+                                                                     hisTitle = "Transaction " + transactions + ": Balance: " + balDbl + "( " + difference + ") Dollers Per Day: " + newDPD + "( " + differenceDPD + ") Date: " + date;
                                                                  } else if (difference > 0) {
-                                                                     hisTitle = "Transaction: " + transactions + "Balance: " + balDbl + "(+ " + difference + ") Dollers Per Day: " + newDPD + "(+ " + differenceDPD + ") Date: " + date;
+                                                                     hisTitle = "Transaction " + transactions + ": Balance: " + balDbl + "(+ " + difference + ") Dollers Per Day: " + newDPD + "(+ " + differenceDPD + ") Date: " + date;
                                                                  } else if (difference < 0) {
                                                                      if (differenceDPD < 0) {
-                                                                         hisTitle = "Transaction: " + transactions + "Balance: " + balDbl + "( " + difference + ") Dollers Per Day: " + newDPD + "( " + differenceDPD + ") Date: " + date;
+                                                                         hisTitle = "Transaction " + transactions + ": Balance: " + balDbl + "( " + difference + ") Dollers Per Day: " + newDPD + "( " + differenceDPD + ") Date: " + date;
                                                                      } else if (differenceDPD > 0) {
-                                                                         hisTitle = "Transaction: " + transactions + "Balance: " + balDbl + "( " + difference + ") Dollers Per Day: " + newDPD + "(+ " + differenceDPD + ") Date: " + date;
+                                                                         hisTitle = "Transaction " + transactions + ": Balance: " + balDbl + "( " + difference + ") Dollers Per Day: " + newDPD + "(+ " + differenceDPD + ") Date: " + date;
                                                                      } else if (differenceDPD == 0) {
-                                                                         hisTitle = "Transaction: " + transactions + "Balance: " + balDbl + "( " + difference + ") Dollers Per Day: " + newDPD + "( " + differenceDPD + ") Date: " + date;
+                                                                         hisTitle = "Transaction " + transactions + ": Balance: " + balDbl + "( " + difference + ") Dollers Per Day: " + newDPD + "( " + differenceDPD + ") Date: " + date;
                                                                      }
                                                                  }
 
-                                                                 transactionClass transaction = new transactionClass(balDbl, difference, newDPD, differenceDPD, date, title);
+                                                                 transactionClass transaction = new transactionClass(balDbl, difference, newDPD, differenceDPD, date, title, hisTitle);
                                                                  mDatabase.child("history").child(title).setValue(transaction);
 
             }
@@ -84,7 +94,7 @@ userClass currentUser = dataSnapshot.getValue(userClass.class);
             }
         });
 
-           /* String title = "Transaction: " + transactions;
+         /*   String title = "Transaction: " + transactions;
         Log.d("MyApp", "The value of title is "+ title);
         String hisTitle = "Placer";
         if (difference == 0) {
@@ -100,7 +110,7 @@ userClass currentUser = dataSnapshot.getValue(userClass.class);
                 hisTitle = "Transaction: " + transactions + "Balance: " + balDbl + "( " + difference + ") Dollers Per Day: " + newDPD + "( " + differenceDPD + ") Date: " + date;
             }
         }
-
+ /*
 
         transactionClass transaction = new transactionClass(balDbl, difference, newDPD, differenceDPD, date, title);
         String key = mDatabase.child("history").push().getKey();
@@ -108,9 +118,9 @@ userClass currentUser = dataSnapshot.getValue(userClass.class);
 
         Map<String, Object> childUpdates = new HashMap<>();
         childUpdates.put("/history/" + key, postValues);
-        mDatabase.updateChildren(childUpdates); */
-
-        transactionClass transaction = new transactionClass(balDbl, difference, newDPD, differenceDPD, date, "fail");
+        mDatabase.updateChildren(childUpdates);
+*/
+        transactionClass transaction = new transactionClass(balDbl, difference, newDPD, differenceDPD, date, "fail", "fail");
 
 
         return transaction;

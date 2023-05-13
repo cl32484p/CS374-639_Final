@@ -56,7 +56,7 @@ String passowrd =PassowrdE.getText().toString();
 
                                    Toast.makeText(Login.this, "Login Succesed.",
                                            Toast.LENGTH_SHORT).show();
-                                   Intent intent = new Intent(Login.this,editBalance.class);
+                                   Intent intent = new Intent(Login.this,Home.class);
                                    startActivity(intent);
                                } else {
                                    Toast.makeText(Login.this, "Login failed.",

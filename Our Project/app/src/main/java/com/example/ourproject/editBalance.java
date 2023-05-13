@@ -124,20 +124,32 @@ public class editBalance extends AppCompatActivity {
                  Log.d("MyApp", "The value of newDPD is "+ newDPD);
                 differenceDPD = newDPD - Double.parseDouble(dollarsPer);
 
+
+
                 newDPD = formatDouble(newDPD);
                 difference = formatDouble(difference);
+                Log.d("MyApp", "The value of difference is "+ difference);
                 differenceDPD = formatDouble(differenceDPD);
                 balDbl = formatDouble(balDbl);
+                Intent intent = new Intent(editBalance.this,Confirmation.class);
+                Bundle form = new Bundle();
+                form.putDouble("difference", difference);
+                form.putDouble("differenceDPD" , differenceDPD);
+                form.putDouble("balance", balDbl);
+                form.putDouble("newDollarsPer", newDPD);
+
                 SetColorTask setColorTask = new SetColorTask(getApplicationContext(), difference, differenceDPD, newBal, newDollars, save);
                 setColorTask.execute();
                 //setColor(getApplicationContext(),difference,differenceDPD, newBal, newDollars,save);
                 Log.d("MyApp", "The value of balDbl is "+ balDbl);
               //  setBalance(mDatabase, balDbl,newDPD);
-               today = new Date();
-                new UpdateDatabaseTask(mDatabase, today, difference, differenceDPD, balDbl, newDPD).execute();
+               //today = new Date();
+
+                intent.putExtras(form);
+               // new UpdateDatabaseTask(mDatabase, today, difference, differenceDPD, balDbl, newDPD).execute();
 
                // updateDatabase(mDatabase,today,difference,differenceDPD,balDbl,newDPD);
-                Intent intent = new Intent(editBalance.this, Home.class);
+               // Intent intent = new Intent(editBalance.this, Home.class);
                 startActivity(intent);
 
 
