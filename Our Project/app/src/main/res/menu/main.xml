@@ -5,17 +5,17 @@
     <item
         android:id="@+id/logOut"
         android:orderInCategory="10"
-        android:title="Contact"
+        android:title="Log Out"
         app:showAsAction="never" />
     <item
-        android:id="@+id/history"
+        android:id="@+id/mission"
         android:orderInCategory="20"
-        android:title="History"
+        android:title="Mission"
         app:showAsAction="never" />
     <item
-        android:id="@+id/editProfile"
+        android:id="@+id/Resources"
         android:orderInCategory="100"
-        android:title="Account"
+        android:title="Resources"
         app:showAsAction="never" />
 
 

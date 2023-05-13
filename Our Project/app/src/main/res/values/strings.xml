@@ -3,10 +3,44 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <array name="activity_levels">"Sedentary", "Lightly Active", "Moderately Active", "Very
-        Active"
-    </array>
+
+
+
     <string name="activity_level_prompt">Please select your activity level:</string>
+
+
+
+    <string name="sea_grill_1">Egg and Cheese on a Roll with Small Coffee. </string>
+    <string name="sea_grill_2">Meat,Egg,and Cheese on a Roll with Small Coffee. </string>
+    <string name="salad">Salad w/ 1 Protein and 2 Toppings or Salad w/ 4 Toppings + a 20oz Soda or Dosani.</string>
+    <string name="Smoothie">12oz. Strawberry Banana Smoothie w/ 1 Scoop of Protein.</string>
+    <string name="alferno_1">Pasta with 3 Veggie Toppings and 20oz Soda or Water.</string>
+    <string name="alferno_2">Personal Cheese Pizza + 20oz Soda or Water.</string>
+    <string name="alferno_3"> Cheese Slice</string>
+    <string name="Coffe">Cup of Coffee</string>
+    <string name="Coffe2">20oz Dasani or Soda.</string>
+
+<string-array name="activity_levels">
+    <item>Select Level</item>
+    <item>Sedentary</item>
+    <item>Lightly Active</item>
+    <item>Moderately Active</item>
+    <item>Very Active</item>
+</string-array>
+
+    <string name="missionStatementText">Our goal is to provide a convenient way for university students to keep track of their meal plan balance. Having an easy way to keep track of your balance and the number of days left could be all that a busy college student needs.
+
+ In ThriftyBites, the user is able to manually adjust their balance which forces them to be aware of their budget for the rest of the semester and how long they have until the end  of the semester. This could be very important, especially during the early days of the semester when students normally pay no mind to their balance because it was just filled.
+       \n
+We also recognize that students may not be aware of their caloric intake which is vital to their health and has an impact on how often a student spends their money.\n\nOur overall mission is yo promote financial responsibility and awareness to the students of Pace University.
+    </string>
+
+
+
+
+
+    <string name="activity_level_prompt">Please select your activity level:</string>
+
 
     <string-array name="year_levels">
         <item>Select Year</item>
