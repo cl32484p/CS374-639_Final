@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/text_major"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter your major:" />
+
+    <EditText
+        android:id="@+id/edit_major"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/text_campus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select your campus:" />
+
+    <RadioGroup
+        android:id="@+id/group_campus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/button_campus1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Westchester" />
+
+        <RadioButton
+            android:id="@+id/button_campus12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Westchester(Townhouses)" />
+
+        <RadioButton
+            android:id="@+id/button_campus2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NYC" />
+
+        <RadioButton
+            android:id="@+id/button_campus3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grad or Law" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/text_year"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select your year level:" />
+
+    <Spinner
+        android:id="@+id/spinner_year"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/year_levels" />
+
+    <TextView
+        android:id="@+id/text_residency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select your residency status:" />
+
+    <RadioGroup
+        android:id="@+id/group_residency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/button_resident"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resident" />
+
+        <RadioButton
+            android:id="@+id/button_nonresident"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Commuter" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/text_mealplan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select your meal plan:" />
+
+    <Spinner
+        android:id="@+id/spinner_mealplan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/meal_plans" />
+
+    <Button
+        android:id="@+id/newUserBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create Account" />
+
+
+</LinearLayout>
