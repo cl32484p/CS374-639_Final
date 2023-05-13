@@ -39,12 +39,6 @@ login.setOnClickListener(new View.OnClickListener() {
             }
         });
 
-
-
-
-
-
     }
-
 
 }

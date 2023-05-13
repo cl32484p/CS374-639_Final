@@ -8,15 +8,13 @@
 
     <ImageView
         android:id="@+id/imageView"
-        layout_editor_absoluteX="0dp"
-        layout_editor_absoluteY="-45dp"
         android:layout_width="240dp"
         android:layout_height="278dp"
         android:layout_alignEnd="@+id/password_field"
         android:layout_alignParentTop="true"
         android:layout_marginTop="47dp"
         android:layout_marginEnd="51dp"
-        app:srcCompat="@drawable/food" />
+        app:srcCompat="@drawable/logo2" />
 
     <!-- Email and Password Fields -->
 
@@ -30,19 +28,19 @@
         android:hint="Email"
         android:inputType="textEmailAddress" />
 
-    <!-- Login Button -->
-
     <EditText
         android:id="@+id/password_field"
-        android:layout_width="349dp"
-        android:layout_height="44dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/email_field"
         android:layout_alignParentBottom="true"
         android:layout_marginHorizontal="32dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="210dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="206dp"
         android:hint="Password"
         android:inputType="textPassword" />
+
+    <!-- Login Button -->
 
     <Button
         android:id="@+id/login_button"
