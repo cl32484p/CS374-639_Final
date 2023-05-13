@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/current_bal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Current Balance:"
+        android:textColor="@color/orange"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/current_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="200.00"
+        android:textColor="@color/blue"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_below="@id/current_bal"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/current_dollars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Dollars per Day:"
+        android:textColor="@color/orange"
+        android:textSize="20sp"
+        android:layout_below="@id/current_val"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/current_dollarsVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10.00"
+        android:textColor="@color/blue"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_below="@id/current_dollars"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/edit_balance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/current_dollarsVal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/orange"
+
+        android:hint="Enter new balance"
+        android:inputType="numberDecimal"
+        android:textColorHint="@color/blue"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/preview_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Preview Balance"
+        android:backgroundTint="@color/orange"
+        android:textSize="20sp"
+        android:layout_below="@id/edit_balance"
+        android:layout_centerHorizontal="true"/>
+
+
+    <TextView
+        android:id="@+id/new_bal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Balance:"
+        android:textSize="20sp"
+        android:textColor="@color/orange"
+        android:layout_below="@id/preview_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"/>
+
+    <TextView
+        android:id="@+id/new_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NA"
+        android:textColor="@color/blue"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_below="@id/new_bal"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/new_dollars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Dollars per Day:"
+        android:textSize="20sp"
+        android:layout_below="@id/new_val"
+        android:textColor="@color/orange"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/new_dollarsVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NA"
+        android:textColor="@color/blue"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_below="@id/new_dollars"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:backgroundTint="@color/orange"
+        android:textSize="20sp"
+        android:layout_below="@id/new_dollarsVal"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="221dp"
+        android:layout_below="@id/new_dollarsVal"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        app:srcCompat="@drawable/food" />
+
+
+</RelativeLayout>
