@@ -69,7 +69,7 @@
                     android:layout_height="100dp"
                     android:layout_marginTop="16dp"
                     android:elevation="2dp"
-                    android:src="@drawable/toast" />
+                    android:src="@drawable/seagrill" />
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/fab_seagrill"
@@ -184,7 +184,7 @@
                     android:layout_height="100dp"
                     android:layout_marginTop="16dp"
                     android:elevation="2dp"
-                    android:src="@drawable/salad" />
+                    android:src="@drawable/blendit" />
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/fab_Smoothie"
@@ -242,7 +242,7 @@
                     android:layout_height="100dp"
                     android:layout_marginTop="16dp"
                     android:elevation="2dp"
-                    android:src="@drawable/pasta" />
+                    android:src="@drawable/alferno" />
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/fab_alferno"
@@ -275,7 +275,7 @@
                             android:id="@+id/tv_Toast"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Coffe"
+                            android:text="Cafe"
                             android:textStyle="bold"
                             android:textSize="30dp"
                             android:layout_marginTop="16dp"
@@ -300,7 +300,7 @@
                     android:layout_height="100dp"
                     android:layout_marginTop="16dp"
                     android:elevation="2dp"
-                    android:src="@drawable/burger" />
+                    android:src="@drawable/cafe" />
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/fab_coffe"

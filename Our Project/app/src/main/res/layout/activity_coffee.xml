@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Coffee"
+    android:background="@color/lightblue"
+    >
+    <RelativeLayout
+        android:id="@+id/col_left"
+        android:layout_width="230dp"
+        android:layout_height="match_parent"
+        android:background="@color/orange"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Coffe">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/row_Coffe">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/salad_Coffe"
+                    android:text="OFFERS :"
+                    android:textSize="40sp"
+                    android:layout_margin="20dp"
+                    android:textColor="@color/white"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Coffe">
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="330dp"
+                    android:layout_height="190dp"
+                    android:id="@+id/card_Coffe"
+                    android:layout_centerHorizontal="true"
+                    app:cardCornerRadius="40dp"
+                    app:cardBackgroundColor="@color/white">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tv_Coffe"
+                            android:layout_marginLeft="80dp"
+                            android:text="Coffee"
+                            android:textSize="30sp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/info_Coffe"
+                            android:layout_marginLeft="80dp"
+                            android:text="@string/Coffe"
+                            android:layout_below="@id/tv_Coffe"
+                            android:textSize="14dp"
+                            android:textColor="@color/orange"/>
+                        <RatingBar
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rating_Coffe"
+                            android:isIndicator="false"
+                            android:progressTint="@color/teal_200"
+                            android:layout_marginLeft="80dp"
+                            android:layout_below="@id/info_Coffe"
+                            style="@style/Widget.AppCompat.RatingBar.Indicator"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/price_Coffe"
+                            android:layout_centerHorizontal="true"
+                            android:text="4 $"
+                            android:layout_below="@id/rating_Coffe"
+                            android:textSize="20dp"
+                            android:textColor="@color/orange"/>
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="330dp"
+                    android:layout_height="190dp"
+                    android:id="@+id/card_Coffe_2"
+                    android:layout_below="@id/card_Coffe"
+                    android:layout_marginTop="20dp"
+                    android:layout_centerHorizontal="true"
+                    app:cardCornerRadius="40dp"
+                    app:cardBackgroundColor="@color/white">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_Coffe_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="80dp"
+                            android:text="Dasani"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/info_Coffe_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_Coffe_2"
+                            android:layout_marginLeft="80dp"
+                            android:layout_marginTop="0dp"
+                            android:text="@string/Coffe2"
+                            android:textColor="@color/orange"
+                            android:textSize="14dp" />
+
+                        <RatingBar
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rating_Coffe_2"
+                            android:isIndicator="false"
+                            android:progressTint="@color/teal_200"
+                            android:layout_marginLeft="80dp"
+                            android:layout_below="@id/info_Coffe_2"
+                            style="@style/Widget.AppCompat.RatingBar.Indicator"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/price_Coffe_2"
+                            android:layout_centerHorizontal="true"
+                            android:text="2 $"
+                            android:layout_below="@id/rating_Coffe_2"
+                            android:textSize="20dp"
+                            android:textColor="@color/orange"/>
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

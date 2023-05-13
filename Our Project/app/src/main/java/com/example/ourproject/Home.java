@@ -6,6 +6,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -25,6 +26,8 @@ public class Home extends AppCompatActivity {
     private TextView balanceTextView, dollarsPerTextView;
     FirebaseAuth mAuth;
     Double balance, dollarsPer;
+    private int check = 0;
+    private String name, major;
     private Button history;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +46,7 @@ public class Home extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser user = mAuth.getCurrentUser();
         String userId = user.getUid();
-        history = findViewById(R.id.historyButton);
+        history = findViewById(R.id.transactionsButton);
 
 
 
@@ -57,6 +60,9 @@ public class Home extends AppCompatActivity {
 
 
                 userClass user = dataSnapshot.getValue(userClass.class);
+                check = user.getTransactions();
+                name = user.getName();
+                major = user.getMajor();
                 balance = user.getBalance();
                 dollarsPer = user.getDollarsPer();
                 balanceTextView.setText("Current Balance: $" + balance);
@@ -85,23 +91,31 @@ public class Home extends AppCompatActivity {
             startActivity(intent);
         });
 
-        Button transactionsButton = findViewById(R.id.transactionsButton);
-        transactionsButton.setOnClickListener(view -> {
+        Button editBalButton = findViewById(R.id.editBalance);
+        editBalButton.setOnClickListener(view -> {
             Intent intent = new Intent(Home.this, editBalance.class);
             startActivity(intent);
         });
 
         Button profileButton = findViewById(R.id.profileButton);
         profileButton.setOnClickListener(view -> {
-            Intent intent = new Intent(Home.this, CalorieCalculatorActivity.class);
+            Intent intent = new Intent(Home.this, UpdateProfile.class);
+            intent.putExtra("name", name);
+            intent.putExtra("major", major);
             startActivity(intent);
         });
 
         history.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                    if(check == 0)
+                    {
+                        Toast.makeText(Home.this, "You must edit balance to view history", Toast.LENGTH_SHORT).show();
+                    }
+                    else{
                 Intent intent = new Intent(Home.this, History.class);
-                startActivity(intent);
+                startActivity(intent); }
+
             }
         });
 
@@ -129,8 +143,9 @@ public class Home extends AppCompatActivity {
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
                 return true;
-            case R.id.editProfile:
-                intent = new Intent(Home.this, History.class);
+            case R.id.Resources:
+                intent = new Intent(Home.this, Contact.class);
+                startActivity(intent);
             default:
                 return super.onOptionsItemSelected(item);
         }

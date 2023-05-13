@@ -10,12 +10,12 @@
     <item
         android:id="@+id/history"
         android:orderInCategory="20"
-        android:title="History"
+        android:title="Learn More"
         app:showAsAction="never" />
     <item
-        android:id="@+id/editProfile"
+        android:id="@+id/Resources"
         android:orderInCategory="100"
-        android:title="Account"
+        android:title="Resources"
         app:showAsAction="never" />
 
 
