@@ -8,9 +8,9 @@
         android:title="Log Out"
         app:showAsAction="never" />
     <item
-        android:id="@+id/history"
+        android:id="@+id/mission"
         android:orderInCategory="20"
-        android:title="Learn More"
+        android:title="Mission"
         app:showAsAction="never" />
     <item
         android:id="@+id/Resources"

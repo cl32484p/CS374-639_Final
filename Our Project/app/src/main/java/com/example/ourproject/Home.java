@@ -21,14 +21,21 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
+
 public class Home extends AppCompatActivity {
 
-    private TextView balanceTextView, dollarsPerTextView;
+    private TextView balanceTextView, dollarsPerTextView, daysView;
     FirebaseAuth mAuth;
     Double balance, dollarsPer;
     private int check = 0;
     private String name, major;
     private Button history;
+    private Date end = new Date(123,4,16);
+    private long time,dayLong;
+    private double daysDbl;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,11 +50,16 @@ public class Home extends AppCompatActivity {
 
         balanceTextView = findViewById(R.id.balanceTextView);
         dollarsPerTextView = findViewById(R.id.dollarsPer);
+        daysView = findViewById(R.id.daysLeft);
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser user = mAuth.getCurrentUser();
         String userId = user.getUid();
         history = findViewById(R.id.transactionsButton);
-
+        Date today = new Date();
+        time = end.getTime() - today.getTime();
+        dayLong = (TimeUnit.DAYS.convert(time, TimeUnit.MILLISECONDS)); //Retrieve amount of days between todays date and end of semester
+        daysDbl = (double)dayLong;
+        setView(daysView, daysDbl);
 
 
 
@@ -122,6 +134,14 @@ public class Home extends AppCompatActivity {
 
     }
 
+    public static void setView(TextView view, Double dub) {
+
+        String result = view.getText().toString();
+        result = result + String.valueOf(dub);
+        view.setText(result);
+    }
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) { //creates the 3 dot menu on Main
         getMenuInflater().inflate(R.menu.main, menu);
@@ -132,14 +152,16 @@ public class Home extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        Intent intent;
         switch (item.getItemId()) {
-            case R.id.history:
-                // Handle settings action
+            case R.id.mission:
+                 intent = new Intent(Home.this, More.class);
+                startActivity(intent);
                 return true;
             case R.id.logOut:
                 // Handle logout action
                 FirebaseAuth.getInstance().signOut();
-                Intent intent = new Intent(this, Login.class);
+                 intent = new Intent(this, Login.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
                 return true;

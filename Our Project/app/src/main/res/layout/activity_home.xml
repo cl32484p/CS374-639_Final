@@ -24,8 +24,9 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="-13dp"
         android:layout_marginTop="119dp"
+        android:textColor="@color/orange"
         android:text="Current Balance: $415.0"
-        android:background="@color/purple_200"
+        android:background="@color/cardview_dark_background"
         android:textSize="24sp" />
 
     <TextView
@@ -38,8 +39,24 @@
         android:layout_marginTop="6dp"
         android:background="@color/cardview_dark_background"
         android:text="Dollar PER DAY: $138.33"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/orange"
         android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/daysLeft"
+        android:layout_width="228dp"
+        android:layout_height="28dp"
+        android:layout_below="@+id/dollarsPer"
+        android:layout_alignStart="@+id/balanceTextView"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/orange"
+        android:background="@color/cardview_dark_background"
+        android:text="Days left in semester: "
+        android:textSize="18sp" />
+
+
+
 
     <Button
 

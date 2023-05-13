@@ -27,6 +27,15 @@
     <item>Very Active</item>
 </string-array>
 
+    <string name="missionStatementText">Our goal is to provide a convenient way for university students to keep track of their meal plan balance. Having an easy way to keep track of your balance and the number of days left could be all that a busy college student needs.
+
+ In ThriftyBites, the user is able to manually adjust their balance which forces them to be aware of their budget for the rest of the semester and how long they have until the end  of the semester. This could be very important, especially during the early days of the semester when students normally pay no mind to their balance because it was just filled.
+       \n
+We also recognize that students may not be aware of their caloric intake which is vital to their health and has an impact on how often a student spends their money.\n\nOur overall mission is yo promote financial responsibility and awareness to the students of Pace University.
+    </string>
+
+
+
 
     <string-array name="year_levels">
         <item>Select Year</item>
