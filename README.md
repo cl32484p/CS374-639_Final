@@ -1,11 +1,6 @@
 # CS639_Final
 CS 639 Final Project
 
-## YouTube Video and Prersentation
- 
- [Video](https://youtu.be/gZ93SjRartk)
- 
- [Presentation](https://docs.google.com/presentation/d/1EWYkCNaNjy0zdUZ-1G2YpdbxsG_LANQdqP2bwJS5OyQ/edit#slide=id.g10a9ee379fb_0_824)
 
 ## Our Logo 
 
@@ -46,6 +41,11 @@ Shakti Singh ![download](https://user-images.githubusercontent.com/78415690/2338
 * [Sprint Planning](https://docs.google.com/document/d/1ZlfdA0GYv4EwY4Q3WgzRPedhIh2oyHHxo5CiuDEIvl8/edit)
 * [Scrums](https://docs.google.com/document/d/1-Yl3fZahjLiyeS7mO8Nu5Cr3PFlCQSI72sZKxibKsFk/edit)
 
+## YouTube Video 
+[Video](https://youtu.be/gZ93SjRartk)
+ 
+## Presentation
+[Presentation](https://docs.google.com/presentation/d/1EWYkCNaNjy0zdUZ-1G2YpdbxsG_LANQdqP2bwJS5OyQ/edit#slide=id.g10a9ee379fb_0_824)
 
 ## Tools & APIs
 
