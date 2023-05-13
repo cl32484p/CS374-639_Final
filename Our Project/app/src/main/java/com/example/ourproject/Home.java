@@ -1,12 +1,16 @@
 package com.example.ourproject;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -27,12 +31,24 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        setSupportActionBar(findViewById(R.id.toolbar));
+        ActionBar actionBar = getSupportActionBar();
+        // Set the title
+        if (actionBar != null) {
+            actionBar.setTitle("Welcome to Thrifty Bites");
+        }
+
         balanceTextView = findViewById(R.id.balanceTextView);
         dollarsPerTextView = findViewById(R.id.dollarsPer);
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser user = mAuth.getCurrentUser();
         String userId = user.getUid();
         history = findViewById(R.id.historyButton);
+
+
+
+
+
 
         DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("users").child(userId);
         mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -90,8 +106,37 @@ public class Home extends AppCompatActivity {
         });
 
 
-
-
-
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) { //creates the 3 dot menu on Main
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+
+        //return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.history:
+                // Handle settings action
+                return true;
+            case R.id.logOut:
+                // Handle logout action
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(this, Login.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+                return true;
+            case R.id.editProfile:
+                intent = new Intent(Home.this, History.class);
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+
+
+
 }

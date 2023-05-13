@@ -1,5 +1,7 @@
 package com.example.ourproject;
 
+import android.content.Intent;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,6 +47,9 @@ public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.
         private TextView differenceDPDView;
         private TextView dateView;
         private TextView transactionNumberView;
+        private boolean balChange = true;
+        private boolean bugChange = true;
+
 
 
         public ViewHolder(@NonNull View itemView) {
@@ -55,17 +60,43 @@ public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.
             differenceView = itemView.findViewById(R.id.differenceView);
             differenceDPDView = itemView.findViewById(R.id.differenceDPDView);
             dateView = itemView.findViewById(R.id.dateView);
-            transactionNumberView = itemView.findViewById(R.id.transactionNumberView);
+           // transactionNumberView = itemView.findViewById(R.id.transactionNumberView);
         }
 
         public void bind(transactionClass transaction) {
+
+           if(transaction.getDifference() >= 0)
+           {
+               balanceView.setTextColor(Color.parseColor("lime"));
+               differenceView.setTextColor(Color.parseColor("lime"));
+           }
+           else
+           {
+               balChange = true;
+               balanceView.setTextColor(Color.parseColor("red"));
+               differenceView.setTextColor(Color.parseColor("red"));
+           }
+
+            if(transaction.getDollarsPerDifference() >= 0)
+            {
+                dpdView.setTextColor(Color.parseColor("lime"));
+                differenceDPDView.setTextColor(Color.parseColor("lime"));
+            }
+            else
+            {
+               dpdView.setTextColor(Color.parseColor("red"));
+                differenceDPDView.setTextColor(Color.parseColor("red"));
+            }
+
+
+
             titleView.setText(transaction.getTitle());
-            balanceView.setText(String.format(Locale.getDefault(), "%.2f", transaction.getBalance()));
-            dpdView.setText(String.format(Locale.getDefault(), "%.2f", transaction.getDollersPer()));
-            differenceView.setText(String.format(Locale.getDefault(), "%.2f", transaction.getDifference()));
-            differenceDPDView.setText(String.format(Locale.getDefault(), "%.2f", transaction.getDollarsPerDifference()));
-            dateView.setText(transaction.getDate());
-            transactionNumberView.setText(String.valueOf(transaction.getHisTitle()));
+            balanceView.setText("Balance: " + String.format(Locale.getDefault(), "%.2f", transaction.getBalance()));
+            dpdView.setText("Daily Budget: " + String.format(Locale.getDefault(), "%.2f", transaction.getDollersPer()));
+            differenceView.setText("Change in Balance: " +String.format(Locale.getDefault(), "%.2f", transaction.getDifference()));
+            differenceDPDView.setText("Change in Daily Budget: "  + String.format(Locale.getDefault(), "%.2f", transaction.getDollarsPerDifference()));
+            dateView.setText("Date: " + transaction.getDate());
+            //transactionNumberView.setText(String.valueOf(transaction.getHisTitle()));
         }
 
 
