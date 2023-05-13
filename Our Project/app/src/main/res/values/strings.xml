@@ -5,6 +5,7 @@
 
 
 
+
     <string name="activity_level_prompt">Please select your activity level:</string>
 
 
@@ -35,6 +36,10 @@ We also recognize that students may not be aware of their caloric intake which i
     </string>
 
 
+
+
+
+    <string name="activity_level_prompt">Please select your activity level:</string>
 
 
     <string-array name="year_levels">

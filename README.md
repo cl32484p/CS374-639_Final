@@ -14,7 +14,7 @@ Cj Lugo ![WhatsApp Image 2023-04-23 at 6 34 08 PM](https://user-images.githubuse
 
 Shakti Singh ![download](https://user-images.githubusercontent.com/78415690/233870195-13f223cb-3f15-4e9b-8066-09b44948ab37.png)
 
-## Idea prposal and Research 
+## Idea proposal and Research 
 
 [Idea proposal](https://docs.google.com/document/d/1Gbrn7ix9BgLFeoozGtV-X0wHcAa_KWbpz_kpgK3_TH4/edit)
 
@@ -28,21 +28,18 @@ Shakti Singh ![download](https://user-images.githubusercontent.com/78415690/2338
 
 * [Sprint Planning](https://docs.google.com/document/d/1ZlfdA0GYv4EwY4Q3WgzRPedhIh2oyHHxo5CiuDEIvl8/edit)
 * [Scrums](https://docs.google.com/document/d/1-Yl3fZahjLiyeS7mO8Nu5Cr3PFlCQSI72sZKxibKsFk/edit)
-* [Sprint demo video]
-* [Sprint retrospective]
+
 
 ### Sprint 2 
 
 * [Sprint Planning](https://docs.google.com/document/d/1ZlfdA0GYv4EwY4Q3WgzRPedhIh2oyHHxo5CiuDEIvl8/edit)
 * [Scrums](https://docs.google.com/document/d/1-Yl3fZahjLiyeS7mO8Nu5Cr3PFlCQSI72sZKxibKsFk/edit)
-* [Sprint demo video]
-* [Sprint retrospective]
+
 
 ### Sprint 3
 * [Sprint Planning](https://docs.google.com/document/d/1ZlfdA0GYv4EwY4Q3WgzRPedhIh2oyHHxo5CiuDEIvl8/edit)
 * [Scrums](https://docs.google.com/document/d/1-Yl3fZahjLiyeS7mO8Nu5Cr3PFlCQSI72sZKxibKsFk/edit)
-* [Sprint demo video]
-* [Sprint retrospective]
+
 
 ## Tools & APIs
 
