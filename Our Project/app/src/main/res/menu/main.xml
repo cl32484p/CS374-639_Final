@@ -5,7 +5,7 @@
     <item
         android:id="@+id/logOut"
         android:orderInCategory="10"
-        android:title="Contact"
+        android:title="Log Out"
         app:showAsAction="never" />
     <item
         android:id="@+id/history"
