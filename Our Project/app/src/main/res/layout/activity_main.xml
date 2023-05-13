@@ -14,39 +14,38 @@
         android:layout_marginTop="0dp"
         app:srcCompat="@drawable/food"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-45dp" />
+        tools:layout_editor_absoluteY="-45dp"
+        />
 
     <Button
         android:id="@+id/LOGIN"
-        android:layout_width="110dp"
-        android:layout_height="wrap_content"
+        android:layout_width="116dp"
+        android:layout_height="86dp"
         android:layout_alignBottom="@id/imageView"
-        android:layout_marginTop="60dp"
-        android:layout_marginBottom="-100dp"
-        android:layout_marginRight="70dp"
         android:layout_alignParentRight="true"
-        android:background="@color/purple_200"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="62dp"
+        android:layout_marginBottom="-191dp"
+        android:background="@drawable/button_background"
         android:text="LOGIN"
-        android:textColor="@color/white"
-        />
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/SIGNUP"
-        android:layout_width="110dp"
-        android:layout_height="wrap_content"
+        android:layout_width="115dp"
+        android:layout_height="84dp"
         android:layout_alignBottom="@id/imageView"
-        android:layout_marginTop="60dp"
-        android:layout_marginBottom="-100dp"
         android:layout_marginLeft="70dp"
-        android:background="@color/purple_200"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="-189dp"
+        android:background="@drawable/button_background"
         android:text="SIGNUP"
-        android:textColor="@color/white"
-        />
+        android:textColor="@color/white" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="416dp"
         android:layout_height="179dp"
-        android:background="@color/gray"
         android:gravity="center_vertical"
         android:text="Thrifty Bites "
         android:textAlignment="center"
@@ -54,4 +53,13 @@
         android:textSize="24sp"
         android:layout_alignParentBottom="true"
         />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="177dp"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="146dp"
+        android:layout_marginBottom="-29dp"
+        android:src="@drawable/logo" />
 </RelativeLayout>

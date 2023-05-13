@@ -2,7 +2,6 @@
 package com.example.ourproject;
 
 /*
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,7 +10,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 
 
 public class CalorieCalculatorActivity extends AppCompatActivity {
@@ -52,7 +50,7 @@ public class CalorieCalculatorActivity extends AppCompatActivity {
 
         // Calculate calorie intake
         double bmr = 10 * weight + 6.25 * height - 5 * age + 5;
-        double calorieIntake = bmr * activityLevel;
+        double calorieIntake = bmr * (activityLevel);
 
         // Display the result
         calorieIntakeTextView.setText(String.format("%.2f", calorieIntake));
