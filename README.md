@@ -11,7 +11,7 @@ CS 639 Final Project
 
 Freddy ![Freddy](https://user-images.githubusercontent.com/78415690/233870133-b82a30c9-d901-4edf-9230-947ffdd22962.jpeg)
 
-Cj Lugo ![WhatsApp Image 2023-04-23 at 6 34 08 PM](https://user-images.githubusercontent.com/78415690/233869993-7e4e7ad3-26b6-4f38-beff-bb1b6fd4609e.jpeg)
+Cj Lugo
 
 Shakti Singh ![download](https://user-images.githubusercontent.com/78415690/233870195-13f223cb-3f15-4e9b-8066-09b44948ab37.png)
 
